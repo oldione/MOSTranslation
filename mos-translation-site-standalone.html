@@ -19,6 +19,30 @@
   </noscript>
 </head>
 <body>
+  <div id="__pw_gate" style="position:fixed;inset:0;z-index:100000;background:#F7F4ED;display:flex;align-items:center;justify-content:center;">
+    <form id="__pw_form" style="display:flex;flex-direction:column;gap:14px;align-items:center;width:280px;">
+      <div style="font-family:Georgia,serif;font-size:28px;color:#211D15;">MOS Translation</div>
+      <input id="__pw_input" type="password" placeholder="Пароль" autocomplete="off" style="width:100%;padding:12px 14px;font-size:16px;border:1px solid #C9C2B4;border-radius:8px;background:#fff;color:#211D15;outline:none;">
+      <button type="submit" style="width:100%;padding:12px;font-size:16px;border:none;border-radius:8px;background:#7A2E2E;color:#fff;cursor:pointer;">Войти</button>
+      <div id="__pw_err" style="font-size:13px;color:#7A2E2E;visibility:hidden;">Неверный пароль</div>
+    </form>
+  </div>
+  <script>
+    window.__pwReady = new Promise(function(resolve){
+      var gate = document.getElementById('__pw_gate');
+      if (sessionStorage.getItem('__mos_pw_ok') === '1') { gate.remove(); resolve(); return; }
+      document.getElementById('__pw_form').addEventListener('submit', function(e){
+        e.preventDefault();
+        if (document.getElementById('__pw_input').value === 'MOStrans123') {
+          sessionStorage.setItem('__mos_pw_ok', '1');
+          gate.remove();
+          resolve();
+        } else {
+          document.getElementById('__pw_err').style.visibility = 'visible';
+        }
+      });
+    });
+  </script>
   <div id="__bundler_thumbnail">
   <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
     <circle cx="600" cy="400" r="170" fill="none" stroke="#7A2E2E" stroke-width="8"></circle>
@@ -31,6 +55,7 @@
   <script>
     
 document.addEventListener('DOMContentLoaded', async function() {
+  if (window.__pwReady) { await window.__pwReady; }
   const loading = document.getElementById('__bundler_loading');
   function setStatus(msg) { if (loading) loading.textContent = msg; }
 
