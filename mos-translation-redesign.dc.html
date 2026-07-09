@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&family=Golos+Text:wght@400;500;600;700;800&family=Spectral:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>
+body{margin:0;background:#EDEAE3;font-family:'Golos Text',system-ui,sans-serif}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}
+.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}
+.dv-opts{display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 12px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)}
+.dv-card{max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;box-shadow:0 2px 14px rgba(0,0,0,.08);overflow:hidden}
+.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}
+.dv-next{margin:22px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}
+</style>
+</helmet>
+
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Главная MOS Translation — три премиум-направления · 1440px</span></div>
+<div class="dv-opts">
+
+<!-- ============================ 1a ГЕРБОВАЯ БУМАГА ============================ -->
+<div class="dv-opt" id="1a">
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>«Гербовая бумага» — тёмный, серифы, золото</div>
+<div class="dv-card" style="width:1440px" data-screen-label="1a Гербовая бумага">
+
+  <!-- header -->
+  <header style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 56px;background:#0F1722;border-bottom:1px solid rgba(200,163,95,.25)">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#F5F1E8;letter-spacing:.02em">MOS <span style="color:#C8A35F">Translation</span></div>
+      <div style="font-size:10.5px;letter-spacing:.22em;color:rgba(245,241,232,.5);text-transform:uppercase">Белград</div>
+    </div>
+    <nav style="display:flex;gap:30px;font-size:14px;color:rgba(245,241,232,.78)">
+      <a href="#1a" style="color:inherit;text-decoration:none">Услуги</a>
+      <a href="#1a" style="color:inherit;text-decoration:none">Цены</a>
+      <a href="#1a" style="color:inherit;text-decoration:none">Калькулятор</a>
+      <a href="#1a" style="color:inherit;text-decoration:none">Команда</a>
+      <a href="#1a" style="color:inherit;text-decoration:none">Контакты</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:20px">
+      <div style="display:flex;gap:2px;border:1px solid rgba(200,163,95,.4);border-radius:3px;overflow:hidden;font-size:12px;font-weight:600">
+        <span style="padding:5px 10px;background:#C8A35F;color:#0F1722">RU</span>
+        <span style="padding:5px 10px;color:rgba(245,241,232,.6)">SR</span>
+        <span style="padding:5px 10px;color:rgba(245,241,232,.6)">EN</span>
+      </div>
+      <a href="{{ phoneHref }}" style="font-size:15px;font-weight:700;color:#F5F1E8;text-decoration:none">{{ phone }}</a>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <div style="background:#0F1722;color:#F5F1E8;padding:72px 56px 80px;display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center">
+    <div>
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:26px">
+        <span style="width:36px;height:1px;background:#C8A35F"></span>
+        <span style="font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#C8A35F">Бюро судебных переводов · с 2011 года</span>
+      </div>
+      <h1 style="font-family:'Playfair Display',serif;font-size:52px;line-height:1.14;font-weight:600;margin:0 0 22px;text-wrap:balance">Судебный перевод, которому доверяют нотариусы, суды и банки</h1>
+      <p style="font-size:17px;line-height:1.65;color:rgba(245,241,232,.72);margin:0 0 14px;max-width:540px">Русский · Сербский · Английский. Перевод с синей печатью лицензированного судебного переводчика — для ВНЖ, нотариуса, суда, банка и визовых центров.</p>
+      <div style="display:flex;gap:18px;align-items:center;margin:0 0 34px;font-size:12.5px;color:rgba(245,241,232,.55)">
+        <span style="border:1px solid rgba(200,163,95,.45);padding:5px 12px;border-radius:2px">Лицензия № 740-06-00973</span>
+        <span style="border:1px solid rgba(200,163,95,.45);padding:5px 12px;border-radius:2px">Лицензия № 740-06-01248</span>
+        <span>Минюст Республики Сербии</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:14px">
+        <a href="mailto:melodyofspeech@gmail.com" style="background:#C8A35F;color:#0F1722;font-weight:700;font-size:15px;padding:15px 28px;border-radius:2px;text-decoration:none">Отправить документ на расчёт</a>
+        <a href="https://t.me/Viktoria_rsb" style="border:1px solid rgba(245,241,232,.35);color:#F5F1E8;font-weight:600;font-size:15px;padding:15px 24px;border-radius:2px;text-decoration:none">Telegram</a>
+        <a href="https://wa.me/38163338105" style="border:1px solid rgba(245,241,232,.35);color:#F5F1E8;font-weight:600;font-size:15px;padding:15px 24px;border-radius:2px;text-decoration:none">WhatsApp</a>
+        <a href="{{ phoneHref }}" style="border:1px solid rgba(245,241,232,.35);color:#F5F1E8;font-weight:600;font-size:15px;padding:15px 24px;border-radius:2px;text-decoration:none">Позвонить</a>
+      </div>
+      <div style="margin-top:22px;font-size:13.5px;color:rgba(245,241,232,.55)">Ответим в течение 10 минут · Оплата в RSD, EUR и RUB</div>
+    </div>
+    <div style="position:relative">
+      <div style="position:absolute;inset:18px -18px -18px 18px;border:1px solid rgba(200,163,95,.5)"></div>
+      <image-slot id="hero-1a" shape="rect" fit="cover" placeholder="Фото: переводчик за работой" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80" style="width:100%;height:440px;position:relative;display:block"></image-slot>
+      <div style="position:absolute;left:-24px;bottom:32px;background:#F5F1E8;color:#0F1722;padding:16px 22px;max-width:270px;box-shadow:0 12px 30px rgba(0,0,0,.35)">
+        <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:700;margin-bottom:4px">Синяя печать sudski tumač</div>
+        <div style="font-size:13px;color:#5C5648;line-height:1.5">Принимается нотариусами, МУП, судами и банками Сербии</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- stats -->
+  <div style="background:#0B1119;border-top:1px solid rgba(200,163,95,.2);padding:34px 56px;display:grid;grid-template-columns:repeat(4,1fr);gap:32px">
+    <div><div style="font-family:'Playfair Display',serif;font-size:40px;color:#C8A35F">15</div><div style="font-size:13.5px;color:rgba(245,241,232,.6);line-height:1.45">лет предоставляем услуги перевода</div></div>
+    <div><div style="font-family:'Playfair Display',serif;font-size:40px;color:#C8A35F">35 880</div><div style="font-size:13.5px;color:rgba(245,241,232,.6);line-height:1.45">страниц переведено за прошлый год</div></div>
+    <div><div style="font-family:'Playfair Display',serif;font-size:40px;color:#C8A35F">13</div><div style="font-size:13.5px;color:rgba(245,241,232,.6);line-height:1.45">языков в работе команды</div></div>
+    <div><div style="font-family:'Playfair Display',serif;font-size:40px;color:#C8A35F">2</div><div style="font-size:13.5px;color:rgba(245,241,232,.6);line-height:1.45">лицензии Министерства юстиции Сербии</div></div>
+  </div>
+
+  <!-- services -->
+  <div style="background:#F5F1E8;padding:78px 56px">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:44px">
+      <h2 style="font-family:'Playfair Display',serif;font-size:36px;font-weight:600;color:#171A1E;margin:0">Услуги для частных лиц и бизнеса</h2>
+      <div style="font-size:14px;color:#8A8271">Документы любой категории сложности</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#DDD5C4;border:1px solid #DDD5C4">
+      <sc-for list="{{ services }}" as="svc" hint-placeholder-count="10">
+        <div style="background:#F5F1E8;padding:26px 22px;display:flex;flex-direction:column;gap:10px;min-height:150px" style-hover="background:#EFE8D9">
+          <div style="font-family:'Playfair Display',serif;font-size:15px;color:#C8A35F">{{ svc.num }}</div>
+          <div style="font-size:15px;font-weight:700;color:#171A1E;line-height:1.35">{{ svc.title }}</div>
+          <div style="font-size:12.5px;color:#7B7361;line-height:1.5">{{ svc.desc }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- prices -->
+  <div style="background:#F5F1E8;padding:0 56px 78px">
+    <h2 style="font-family:'Playfair Display',serif;font-size:36px;font-weight:600;color:#171A1E;margin:0 0 12px">Цены</h2>
+    <p style="font-size:14.5px;color:#7B7361;margin:0 0 36px">Договоры и большие тексты считаем по знакам: 1 800 знаков с пробелами = 1 страница. Срочный перевод в течение 24 часов — ×2.</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px">
+      <div style="border:1px solid #DDD5C4;padding:28px 24px;background:#fff">
+        <div style="font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#8A8271;margin-bottom:14px">Личные документы</div>
+        <div style="font-family:'Playfair Display',serif;font-size:32px;color:#171A1E">от 1 800 <span style="font-size:16px">RSD/стр</span></div>
+        <div style="font-size:13.5px;color:#7B7361;line-height:1.55;margin-top:12px">Паспорта, дипломы, свидетельства, справки, доверенности. RU↔SR, SR↔EN.</div>
+      </div>
+      <div style="border:1px solid #C8A35F;padding:28px 24px;background:#0F1722">
+        <div style="font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#C8A35F;margin-bottom:14px">Русский ↔ Английский</div>
+        <div style="font-family:'Playfair Display',serif;font-size:32px;color:#F5F1E8">от 3 000 <span style="font-size:16px">RSD/стр</span></div>
+        <div style="font-size:13.5px;color:rgba(245,241,232,.65);line-height:1.55;margin-top:12px">Прямой судебный перевод по двум лицензиям — без промежуточного языка.</div>
+      </div>
+      <div style="border:1px solid #DDD5C4;padding:28px 24px;background:#fff">
+        <div style="font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#8A8271;margin-bottom:14px">Медицина и спец-тексты</div>
+        <div style="font-family:'Playfair Display',serif;font-size:32px;color:#171A1E">от 2 500 <span style="font-size:16px">RSD/стр</span></div>
+        <div style="font-size:13.5px;color:#7B7361;line-height:1.55;margin-top:12px">Медицинские, технические и рукописные тексты. RU↔EN — от 3 500 RSD.</div>
+      </div>
+      <div style="border:1px solid #DDD5C4;padding:28px 24px;background:#fff">
+        <div style="font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#8A8271;margin-bottom:14px">Апостиль</div>
+        <div style="font-family:'Playfair Display',serif;font-size:32px;color:#171A1E">100 <span style="font-size:16px">EUR</span></div>
+        <div style="font-size:13.5px;color:#7B7361;line-height:1.55;margin-top:12px">Консульская легализация и апостилирование. Пошлина не входит в стоимость.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- calculator -->
+  <div style="background:#0F1722;padding:78px 56px;display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start">
+    <div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:36px;font-weight:600;color:#F5F1E8;margin:0 0 18px">Калькулятор стоимости</h2>
+      <p style="font-size:15px;line-height:1.65;color:rgba(245,241,232,.65);margin:0 0 26px">Предварительный расчёт за 10 секунд. Точную стоимость и срок подтвердим после просмотра документа — свяжемся в течение 10 минут.</p>
+      <div style="border-left:2px solid #C8A35F;padding-left:18px;font-size:13.5px;line-height:1.7;color:rgba(245,241,232,.55)">
+        Базовые пары RU↔SR и SR↔EN — 1 800 RSD/стр<br>RU↔EN — 3 000 RSD/стр<br>Медицинские и спец-тексты — 2 500 / 3 500 RSD/стр
+      </div>
+    </div>
+    <div style="background:#F5F1E8;padding:34px 36px;display:flex;flex-direction:column;gap:18px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <label style="display:flex;flex-direction:column;gap:7px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8A8271">Языковая пара
+          <select value="{{ calcA.pair }}" onChange="{{ calcA.setPair }}" style="font-family:'Manrope',sans-serif;font-size:15px;padding:12px;border:1px solid #CFC6B2;background:#fff;color:#171A1E">
+            <option value="ru-sr">Русский ↔ Сербский</option>
+            <option value="sr-en">Сербский ↔ Английский</option>
+            <option value="ru-en">Русский ↔ Английский</option>
+          </select>
+        </label>
+        <label style="display:flex;flex-direction:column;gap:7px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8A8271">Тип документа
+          <select value="{{ calcA.type }}" onChange="{{ calcA.setType }}" style="font-family:'Manrope',sans-serif;font-size:15px;padding:12px;border:1px solid #CFC6B2;background:#fff;color:#171A1E">
+            <option value="std">Свидетельства / дипломы / справки</option>
+            <option value="contract">Договор / большой текст (по знакам)</option>
+            <option value="med">Медицинские тексты</option>
+            <option value="spec">Спец-тексты</option>
+          </select>
+        </label>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:end">
+        <sc-if value="{{ calcA.isContract }}" hint-placeholder-val="{{ false }}">
+          <label style="display:flex;flex-direction:column;gap:7px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8A8271">Знаков с пробелами
+            <input type="number" min="1" value="{{ calcA.chars }}" onChange="{{ calcA.setChars }}" style="font-family:'Manrope',sans-serif;font-size:15px;padding:12px;border:1px solid #CFC6B2;background:#fff;color:#171A1E">
+          </label>
+        </sc-if>
+        <sc-if value="{{ calcA.notContract }}" hint-placeholder-val="{{ true }}">
+          <label style="display:flex;flex-direction:column;gap:7px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8A8271">Количество страниц
+            <input type="number" min="1" value="{{ calcA.pages }}" onChange="{{ calcA.setPages }}" style="font-family:'Manrope',sans-serif;font-size:15px;padding:12px;border:1px solid #CFC6B2;background:#fff;color:#171A1E">
+          </label>
+        </sc-if>
+        <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:#171A1E;padding:12px 0;cursor:pointer">
+          <input type="checkbox" checked="{{ calcA.urgent }}" onChange="{{ calcA.toggleUrgent }}" style="width:18px;height:18px;accent-color:#C8A35F">
+          Срочно — в течение 24 часов (×2)
+        </label>
+      </div>
+      <div style="border-top:1px solid #DDD5C4;padding-top:18px;display:flex;align-items:baseline;justify-content:space-between">
+        <div style="font-size:13px;color:#8A8271">{{ calcA.summary }}</div>
+        <div style="font-family:'Playfair Display',serif;font-size:34px;color:#171A1E">{{ calcA.total }}</div>
+      </div>
+      <a href="mailto:melodyofspeech@gmail.com" style="background:#0F1722;color:#F5F1E8;text-align:center;font-weight:700;font-size:15px;padding:15px;text-decoration:none">Отправить документ — уточним за 10 минут</a>
+    </div>
+  </div>
+
+  <!-- how it works -->
+  <div style="background:#F5F1E8;padding:78px 56px">
+    <h2 style="font-family:'Playfair Display',serif;font-size:36px;font-weight:600;color:#171A1E;margin:0 0 44px">Как это работает</h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px">
+      <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
+        <div style="border-top:2px solid #C8A35F;padding-top:20px">
+          <div style="font-family:'Playfair Display',serif;font-size:15px;color:#C8A35F;margin-bottom:8px">{{ st.num }}</div>
+          <div style="font-size:17px;font-weight:700;color:#171A1E;margin-bottom:8px">{{ st.title }}</div>
+          <div style="font-size:13.5px;color:#7B7361;line-height:1.6">{{ st.desc }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- team -->
+  <div style="background:#F5F1E8;padding:0 56px 78px">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:40px">
+      <h2 style="font-family:'Playfair Display',serif;font-size:36px;font-weight:600;color:#171A1E;margin:0">За результат отвечают лучшие специалисты</h2>
+      <div style="font-size:14px;color:#8A8271;font-style:italic">Точность = уважение к вашему времени</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+      <div style="background:#fff;border:1px solid #DDD5C4">
+        <image-slot id="team-1a-ivan" shape="rect" placeholder="Фото Ивана" style="width:100%;height:300px;display:block"></image-slot>
+        <div style="padding:22px 24px">
+          <div style="font-family:'Playfair Display',serif;font-size:21px;color:#171A1E">Иван</div>
+          <div style="font-size:13.5px;color:#7B7361;line-height:1.55;margin-top:6px">Судебный переводчик, соучредитель Melody of Speech и MOS Translation</div>
+          <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#C8A35F;margin-top:12px">Стаж 15 лет</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #DDD5C4">
+        <image-slot id="team-1a-elena" shape="rect" placeholder="Фото Елены" style="width:100%;height:300px;display:block"></image-slot>
+        <div style="padding:22px 24px">
+          <div style="font-family:'Playfair Display',serif;font-size:21px;color:#171A1E">Елена</div>
+          <div style="font-size:13.5px;color:#7B7361;line-height:1.55;margin-top:6px">Директор, соучредитель Melody of Speech и MOS Business Alliance</div>
+          <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#C8A35F;margin-top:12px">Стаж 12 лет</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #DDD5C4">
+        <image-slot id="team-1a-ekaterina" shape="rect" placeholder="Фото Екатерины" style="width:100%;height:300px;display:block"></image-slot>
+        <div style="padding:22px 24px">
+          <div style="font-family:'Playfair Display',serif;font-size:21px;color:#171A1E">Екатерина Волкова</div>
+          <div style="font-size:13.5px;color:#7B7361;line-height:1.55;margin-top:6px">Юрист — сопровождение ВНЖ/ПМЖ, доверенности, нотариат</div>
+          <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#C8A35F;margin-top:12px">Стаж 8 лет</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div style="background:#0F1722;padding:78px 56px">
+    <h2 style="font-family:'Playfair Display',serif;font-size:36px;font-weight:600;color:#F5F1E8;margin:0 0 40px">Частые вопросы</h2>
+    <div style="display:flex;flex-direction:column;border-top:1px solid rgba(200,163,95,.25)">
+      <sc-for list="{{ faqA }}" as="f" hint-placeholder-count="5">
+        <div style="border-bottom:1px solid rgba(200,163,95,.25)">
+          <div onClick="{{ f.toggle }}" style="display:flex;align-items:baseline;gap:22px;padding:22px 0;cursor:pointer">
+            <span style="font-family:'Playfair Display',serif;font-size:15px;color:#C8A35F;min-width:28px">{{ f.num }}</span>
+            <span style="flex:1;font-size:17px;font-weight:600;color:#F5F1E8">{{ f.q }}</span>
+            <span style="font-size:20px;color:#C8A35F">{{ f.mark }}</span>
+          </div>
+          <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:0 0 24px 50px;max-width:820px;font-size:15px;line-height:1.7;color:rgba(245,241,232,.65)">{{ f.a }}</div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- contacts -->
+  <div style="background:#F5F1E8;padding:78px 56px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:stretch">
+    <div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:36px;font-weight:600;color:#171A1E;margin:0 0 24px">Контакты</h2>
+      <div style="font-size:16px;line-height:1.7;color:#3B372E">
+        <strong>Kralja Milutina 46, Белград</strong><br>100 метров от Посольства России
+      </div>
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:10px 24px;margin:26px 0;font-size:15px;color:#3B372E">
+        <span style="color:#8A8271">Пн–Сб</span><strong>09:00–20:00</strong>
+        <span style="color:#8A8271">Воскресенье</span><strong>по записи</strong>
+        <span style="color:#8A8271">Телефон</span><a href="{{ phoneHref }}" style="color:#171A1E;font-weight:700;text-decoration:none">{{ phone }}</a>
+        <span style="color:#8A8271">E-mail</span><a href="mailto:melodyofspeech@gmail.com" style="color:#171A1E;text-decoration:none">melodyofspeech@gmail.com</a>
+      </div>
+      <div style="display:flex;gap:12px">
+        <a href="https://t.me/Viktoria_rsb" style="background:#0F1722;color:#F5F1E8;font-weight:600;font-size:14px;padding:12px 22px;border-radius:2px;text-decoration:none">Telegram</a>
+        <a href="https://wa.me/38163338105" style="background:#0F1722;color:#F5F1E8;font-weight:600;font-size:14px;padding:12px 22px;border-radius:2px;text-decoration:none">WhatsApp</a>
+        <a href="{{ phoneHref }}" style="border:1px solid #0F1722;color:#0F1722;font-weight:600;font-size:14px;padding:12px 22px;border-radius:2px;text-decoration:none">Позвонить</a>
+      </div>
+      <div style="margin-top:22px;font-size:12.5px;color:#8A8271">Часы могут меняться в праздничные дни — уточняйте по телефону.</div>
+    </div>
+    <iframe src="https://www.google.com/maps?q=Kralja+Milutina+46,+Beograd,+Serbia&hl=ru&z=16&output=embed" style="width:100%;min-height:360px;border:1px solid #DDD5C4;filter:grayscale(.6)"></iframe>
+  </div>
+
+  <footer style="background:#0B1119;color:rgba(245,241,232,.5);padding:26px 56px;display:flex;justify-content:space-between;font-size:12.5px">
+    <div>© 2026 MOS Translation · Melody of Speech</div>
+    <div>Лицензии Минюста Сербии № 740-06-00973 · № 740-06-01248</div>
+  </footer>
+</div>
+</div>
+
+<!-- ============================ 1b ЮРИДИЧЕСКИЙ БУТИК ============================ -->
+<div class="dv-opt" id="1b">
+<div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>«Юридический бутик» — светлый editorial, бордо</div>
+<div class="dv-card" style="width:1440px;background:#F7F4ED" data-screen-label="1b Юридический бутик">
+
+  <!-- topbar -->
+  <div style="display:flex;justify-content:space-between;padding:10px 56px;font-size:12px;color:#8A8474;border-bottom:1px solid #E5DFD0;background:#F7F4ED">
+    <span>Kralja Milutina 46, Белград · 100 м от Посольства России</span>
+    <span>Пн–Сб 09:00–20:00 · Оплата RSD / EUR / RUB</span>
+  </div>
+  <header style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 56px;background:#F7F4ED;border-bottom:1px solid #E5DFD0">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:700;color:#211D15;letter-spacing:.01em">MOS Translation</div>
+    <nav style="display:flex;gap:32px;font-size:14px;color:#5A5443">
+      <a href="#1b" style="color:inherit;text-decoration:none">Услуги</a>
+      <a href="#1b" style="color:inherit;text-decoration:none">Цены</a>
+      <a href="#1b" style="color:inherit;text-decoration:none">Калькулятор</a>
+      <a href="#1b" style="color:inherit;text-decoration:none">Команда</a>
+      <a href="#1b" style="color:inherit;text-decoration:none">Контакты</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:22px">
+      <div style="display:flex;gap:14px;font-size:13px;font-weight:600">
+        <span style="color:#7A2E2E;border-bottom:2px solid #7A2E2E;padding-bottom:2px">RU</span>
+        <span style="color:#9A9382">SR</span>
+        <span style="color:#9A9382">EN</span>
+      </div>
+      <a href="mailto:melodyofspeech@gmail.com" style="background:#7A2E2E;color:#F7F4ED;font-size:14px;font-weight:600;padding:11px 22px;text-decoration:none;border-radius:2px">Расчёт стоимости</a>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <div style="padding:88px 56px 64px;text-align:center;background:#F7F4ED">
+    <div style="font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#7A2E2E;margin-bottom:24px">Бюро судебных переводов · Белград</div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:64px;line-height:1.08;font-weight:600;color:#211D15;margin:0 auto 24px;max-width:900px;text-wrap:balance">Перевод документов, имеющий силу закона</h1>
+    <p style="font-size:17px;line-height:1.65;color:#6B6452;max-width:640px;margin:0 auto 34px">Судебный переводчик с двумя лицензиями Минюста Сербии. Русский, сербский и английский — для ВНЖ, нотариуса, суда, банков и визовых центров.</p>
+    <div style="display:flex;justify-content:center;gap:14px;margin-bottom:20px">
+      <a href="mailto:melodyofspeech@gmail.com" style="background:#211D15;color:#F7F4ED;font-weight:600;font-size:15px;padding:15px 30px;text-decoration:none;border-radius:2px">Отправить документ на расчёт</a>
+      <a href="https://t.me/Viktoria_rsb" style="border:1px solid #C9C0AA;color:#211D15;font-weight:600;font-size:15px;padding:15px 24px;text-decoration:none;border-radius:2px">Telegram</a>
+      <a href="https://wa.me/38163338105" style="border:1px solid #C9C0AA;color:#211D15;font-weight:600;font-size:15px;padding:15px 24px;text-decoration:none;border-radius:2px">WhatsApp</a>
+      <a href="{{ phoneHref }}" style="border:1px solid #C9C0AA;color:#211D15;font-weight:600;font-size:15px;padding:15px 24px;text-decoration:none;border-radius:2px">{{ phone }}</a>
+    </div>
+    <div style="font-size:13px;color:#9A9382">Лицензии № 740-06-00973 и № 740-06-01248 · Реестр Министерства юстиции Республики Сербии</div>
+  </div>
+  <div style="padding:0 56px 72px;background:#F7F4ED">
+    <image-slot id="hero-1b" shape="rect" fit="cover" placeholder="Панорамное фото: офис / документы" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80" style="width:100%;height:380px;display:block"></image-slot>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #E5DFD0;border-top:none;background:#fff">
+      <div style="padding:26px;border-right:1px solid #E5DFD0"><div style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#211D15">15 <span style="font-size:17px;color:#7A2E2E">лет</span></div><div style="font-size:13px;color:#8A8474">опыта судебных переводов</div></div>
+      <div style="padding:26px;border-right:1px solid #E5DFD0"><div style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#211D15">35 880</div><div style="font-size:13px;color:#8A8474">страниц за прошлый год</div></div>
+      <div style="padding:26px;border-right:1px solid #E5DFD0"><div style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#211D15">13</div><div style="font-size:13px;color:#8A8474">языков в работе</div></div>
+      <div style="padding:26px"><div style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#211D15">10 <span style="font-size:17px;color:#7A2E2E">мин</span></div><div style="font-size:13px;color:#8A8474">до ответа менеджера</div></div>
+    </div>
+  </div>
+
+  <!-- services -->
+  <div style="padding:0 56px 78px;background:#F7F4ED">
+    <div style="display:grid;grid-template-columns:.85fr 2fr;gap:56px">
+      <div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:#211D15;margin:0 0 16px;line-height:1.1">Услуги</h2>
+        <p style="font-size:14.5px;line-height:1.65;color:#6B6452">Работаем с личными, корпоративными, банковскими, судебными, медицинскими и арбитражными документами. Лично в Белграде или полностью дистанционно.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 40px">
+        <sc-for list="{{ services }}" as="svc" hint-placeholder-count="10">
+          <div style="display:flex;gap:18px;padding:18px 0;border-bottom:1px solid #E5DFD0">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:16px;color:#7A2E2E;min-width:26px;padding-top:2px">{{ svc.num }}</span>
+            <div>
+              <div style="font-size:15.5px;font-weight:600;color:#211D15">{{ svc.title }}</div>
+              <div style="font-size:13px;color:#8A8474;line-height:1.5;margin-top:3px">{{ svc.desc }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- prices + calc -->
+  <div style="background:#211D15;padding:78px 56px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start">
+      <div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:#F7F4ED;margin:0 0 30px">Прозрачные цены</h2>
+        <div style="display:flex;flex-direction:column">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(247,244,237,.15)"><span style="font-size:15px;color:rgba(247,244,237,.85)">Личные документы · RU↔SR, SR↔EN</span><span style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#F7F4ED">от 1 800 RSD/стр</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(247,244,237,.15)"><span style="font-size:15px;color:rgba(247,244,237,.85)">Русский ↔ Английский (прямой)</span><span style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#F7F4ED">от 3 000 RSD/стр</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(247,244,237,.15)"><span style="font-size:15px;color:rgba(247,244,237,.85)">Медицинские и спец-тексты</span><span style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#F7F4ED">от 2 500 RSD/стр</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(247,244,237,.15)"><span style="font-size:15px;color:rgba(247,244,237,.85)">Апостиль (пошлина отдельно)</span><span style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#F7F4ED">100 EUR</span></div>
+        </div>
+        <div style="margin-top:22px;font-size:13px;line-height:1.7;color:rgba(247,244,237,.5)">Договоры и большие тексты — по знакам: 1 800 знаков с пробелами = 1 страница.<br>Срочный перевод в течение 24 часов — коэффициент ×2.</div>
+      </div>
+      <div style="background:#F7F4ED;padding:34px 36px;display:flex;flex-direction:column;gap:18px;border-radius:2px">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:26px;color:#211D15">Калькулятор стоимости</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <label style="display:flex;flex-direction:column;gap:7px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A8474">Языковая пара
+            <select value="{{ calcB.pair }}" onChange="{{ calcB.setPair }}" style="font-family:'Golos Text',sans-serif;font-size:15px;padding:12px;border:1px solid #C9C0AA;background:#fff;color:#211D15">
+              <option value="ru-sr">Русский ↔ Сербский</option>
+              <option value="sr-en">Сербский ↔ Английский</option>
+              <option value="ru-en">Русский ↔ Английский</option>
+            </select>
+          </label>
+          <label style="display:flex;flex-direction:column;gap:7px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A8474">Тип документа
+            <select value="{{ calcB.type }}" onChange="{{ calcB.setType }}" style="font-family:'Golos Text',sans-serif;font-size:15px;padding:12px;border:1px solid #C9C0AA;background:#fff;color:#211D15">
+              <option value="std">Свидетельства / дипломы / справки</option>
+              <option value="contract">Договор / большой текст (по знакам)</option>
+              <option value="med">Медицинские тексты</option>
+              <option value="spec">Спец-тексты</option>
+            </select>
+          </label>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:end">
+          <sc-if value="{{ calcB.isContract }}" hint-placeholder-val="{{ false }}">
+            <label style="display:flex;flex-direction:column;gap:7px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A8474">Знаков с пробелами
+              <input type="number" min="1" value="{{ calcB.chars }}" onChange="{{ calcB.setChars }}" style="font-family:'Golos Text',sans-serif;font-size:15px;padding:12px;border:1px solid #C9C0AA;background:#fff;color:#211D15">
+            </label>
+          </sc-if>
+          <sc-if value="{{ calcB.notContract }}" hint-placeholder-val="{{ true }}">
+            <label style="display:flex;flex-direction:column;gap:7px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A8474">Количество страниц
+              <input type="number" min="1" value="{{ calcB.pages }}" onChange="{{ calcB.setPages }}" style="font-family:'Golos Text',sans-serif;font-size:15px;padding:12px;border:1px solid #C9C0AA;background:#fff;color:#211D15">
+            </label>
+          </sc-if>
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:#211D15;padding:12px 0;cursor:pointer">
+            <input type="checkbox" checked="{{ calcB.urgent }}" onChange="{{ calcB.toggleUrgent }}" style="width:18px;height:18px;accent-color:#7A2E2E">
+            Срочно, 24 часа (×2)
+          </label>
+        </div>
+        <div style="border-top:1px solid #E5DFD0;padding-top:18px;display:flex;align-items:baseline;justify-content:space-between">
+          <div style="font-size:13px;color:#8A8474">{{ calcB.summary }}</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#7A2E2E">{{ calcB.total }}</div>
+        </div>
+        <a href="mailto:melodyofspeech@gmail.com" style="background:#7A2E2E;color:#F7F4ED;text-align:center;font-weight:600;font-size:15px;padding:15px;text-decoration:none;border-radius:2px">Отправить документ на точный расчёт</a>
+        <div style="font-size:12px;color:#9A9382;text-align:center">Расчёт предварительный. Ответим в течение 10 минут.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- steps -->
+  <div style="padding:78px 56px;background:#F7F4ED">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:#211D15;margin:0 0 40px">Как проходит заказ</h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr)">
+      <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
+        <div style="border-left:1px solid #E5DFD0;padding:6px 26px 0">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:44px;color:#D8CFBB;line-height:1">{{ st.num }}</div>
+          <div style="font-size:16.5px;font-weight:600;color:#211D15;margin:14px 0 8px">{{ st.title }}</div>
+          <div style="font-size:13.5px;color:#8A8474;line-height:1.6">{{ st.desc }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- team -->
+  <div style="padding:0 56px 78px;background:#F7F4ED">
+    <div style="text-align:center;margin-bottom:44px">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:#211D15;margin:0 0 10px">Наша команда</h2>
+      <div style="font-size:15px;color:#8A8474;font-style:italic">Самая главная ценность — это люди</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:36px;max-width:1080px;margin:0 auto">
+      <div style="text-align:center">
+        <image-slot id="team-1b-ivan" shape="circle" placeholder="Фото Ивана" style="width:190px;height:190px;display:block;margin:0 auto 18px"></image-slot>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#211D15">Иван</div>
+        <div style="font-size:13.5px;color:#8A8474;line-height:1.55;margin-top:5px">Судебный переводчик,<br>соучредитель MOS Translation</div>
+        <div style="font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#7A2E2E;margin-top:10px">Стаж 15 лет</div>
+      </div>
+      <div style="text-align:center">
+        <image-slot id="team-1b-elena" shape="circle" placeholder="Фото Елены" style="width:190px;height:190px;display:block;margin:0 auto 18px"></image-slot>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#211D15">Елена</div>
+        <div style="font-size:13.5px;color:#8A8474;line-height:1.55;margin-top:5px">Директор, соучредитель<br>MOS Business Alliance</div>
+        <div style="font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#7A2E2E;margin-top:10px">Стаж 12 лет</div>
+      </div>
+      <div style="text-align:center">
+        <image-slot id="team-1b-ekaterina" shape="circle" placeholder="Фото Екатерины" style="width:190px;height:190px;display:block;margin:0 auto 18px"></image-slot>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#211D15">Екатерина Волкова</div>
+        <div style="font-size:13.5px;color:#8A8474;line-height:1.55;margin-top:5px">Юрист — ВНЖ/ПМЖ,<br>доверенности, нотариат</div>
+        <div style="font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#7A2E2E;margin-top:10px">Стаж 8 лет</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div style="padding:0 56px 78px;background:#F7F4ED">
+    <div style="display:grid;grid-template-columns:.85fr 2fr;gap:56px">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:#211D15;margin:0;line-height:1.1">Частые вопросы</h2>
+      <div style="border-top:1px solid #E5DFD0">
+        <sc-for list="{{ faqB }}" as="f" hint-placeholder-count="5">
+          <div style="border-bottom:1px solid #E5DFD0">
+            <div onClick="{{ f.toggle }}" style="display:flex;align-items:baseline;gap:18px;padding:20px 0;cursor:pointer">
+              <span style="flex:1;font-size:16.5px;font-weight:600;color:#211D15">{{ f.q }}</span>
+              <span style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#7A2E2E">{{ f.mark }}</span>
+            </div>
+            <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:0 40px 22px 0;font-size:14.5px;line-height:1.7;color:#6B6452">{{ f.a }}</div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- contacts -->
+  <div style="background:#fff;border-top:1px solid #E5DFD0;padding:72px 56px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:stretch">
+    <iframe src="https://www.google.com/maps?q=Kralja+Milutina+46,+Beograd,+Serbia&hl=ru&z=16&output=embed" style="width:100%;min-height:340px;border:1px solid #E5DFD0;filter:grayscale(1) sepia(.15)"></iframe>
+    <div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:#211D15;margin:0 0 22px">Приходите или пишите</h2>
+      <div style="font-size:16px;line-height:1.7;color:#3F3A2E"><strong>Kralja Milutina 46, Белград</strong> — 100 метров от Посольства России</div>
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:9px 26px;margin:22px 0;font-size:15px;color:#3F3A2E">
+        <span style="color:#9A9382">Пн–Сб</span><strong>09:00–20:00</strong>
+        <span style="color:#9A9382">Воскресенье</span><strong>по записи</strong>
+        <span style="color:#9A9382">Телефон</span><a href="{{ phoneHref }}" style="color:#211D15;font-weight:700;text-decoration:none">{{ phone }}</a>
+        <span style="color:#9A9382">E-mail</span><a href="mailto:melodyofspeech@gmail.com" style="color:#211D15;text-decoration:none">melodyofspeech@gmail.com</a>
+      </div>
+      <div style="display:flex;gap:12px">
+        <a href="https://t.me/Viktoria_rsb" style="background:#211D15;color:#F7F4ED;font-weight:600;font-size:14px;padding:12px 22px;text-decoration:none;border-radius:2px">Telegram</a>
+        <a href="https://wa.me/38163338105" style="background:#211D15;color:#F7F4ED;font-weight:600;font-size:14px;padding:12px 22px;text-decoration:none;border-radius:2px">WhatsApp</a>
+        <a href="mailto:melodyofspeech@gmail.com" style="border:1px solid #C9C0AA;color:#211D15;font-weight:600;font-size:14px;padding:12px 22px;text-decoration:none;border-radius:2px">Отправить документ</a>
+      </div>
+    </div>
+  </div>
+  <footer style="background:#211D15;color:rgba(247,244,237,.55);padding:24px 56px;display:flex;justify-content:space-between;font-size:12.5px">
+    <div>© 2026 MOS Translation · Melody of Speech</div>
+    <div>Лицензии Минюста Сербии № 740-06-00973 · № 740-06-01248</div>
+  </footer>
+</div>
+</div>
+
+<!-- ============================ 1c СИНЯЯ ПЕЧАТЬ ============================ -->
+<div class="dv-opt" id="1c">
+<div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>«Синяя печать» — светлый, современный, кобальт</div>
+<div class="dv-card" style="width:1440px;background:#FDFDFB" data-screen-label="1c Синяя печать">
+
+  <header style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 56px;background:#FDFDFB;border-bottom:1px solid #E8E9EE">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:40px;height:40px;border:2px solid #1F3BB3;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#1F3BB3">MOS</div>
+      <div>
+        <div style="font-size:18px;font-weight:800;color:#0B1530;letter-spacing:-.01em">MOS Translation</div>
+        <div style="font-size:11px;color:#7A8093">Судебные переводы · Белград</div>
+      </div>
+    </div>
+    <nav style="display:flex;gap:30px;font-size:14px;font-weight:500;color:#3D4356">
+      <a href="#1c" style="color:inherit;text-decoration:none">Услуги</a>
+      <a href="#1c" style="color:inherit;text-decoration:none">Цены</a>
+      <a href="#1c" style="color:inherit;text-decoration:none">Калькулятор</a>
+      <a href="#1c" style="color:inherit;text-decoration:none">Команда</a>
+      <a href="#1c" style="color:inherit;text-decoration:none">Контакты</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:18px">
+      <div style="display:flex;background:#EEF0F6;border-radius:999px;padding:3px;font-size:12.5px;font-weight:600">
+        <span style="padding:6px 13px;background:#1F3BB3;color:#fff;border-radius:999px">RU</span>
+        <span style="padding:6px 13px;color:#7A8093">SR</span>
+        <span style="padding:6px 13px;color:#7A8093">EN</span>
+      </div>
+      <a href="{{ phoneHref }}" style="font-size:15px;font-weight:700;color:#0B1530;text-decoration:none">{{ phone }}</a>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <div style="background:linear-gradient(180deg,#FDFDFB 0%,#F1F3F9 100%);padding:76px 56px 70px;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center">
+    <div>
+      <div style="display:inline-flex;align-items:center;gap:8px;background:#E7ECFB;color:#1F3BB3;font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:999px;margin-bottom:22px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#1F3BB3"></span>
+        Сейчас работаем — ответим за 10 минут
+      </div>
+      <h1 style="font-size:54px;line-height:1.08;font-weight:800;letter-spacing:-.02em;color:#0B1530;margin:0 0 20px;text-wrap:balance">Документы, готовые к подаче. <span style="color:#1F3BB3">С первой попытки.</span></h1>
+      <p style="font-size:17px;line-height:1.65;color:#565D72;margin:0 0 30px;max-width:520px">Судебный перевод RU · SR · EN с синей печатью лицензированного переводчика. Принимают нотариусы, МУП, суды, банки и визовые центры.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px">
+        <a href="mailto:melodyofspeech@gmail.com" style="background:#1F3BB3;color:#fff;font-weight:700;font-size:15px;padding:16px 28px;border-radius:10px;text-decoration:none;box-shadow:0 8px 20px rgba(31,59,179,.25)">Отправить документ на расчёт</a>
+        <a href="https://t.me/Viktoria_rsb" style="background:#fff;border:1px solid #D8DCE8;color:#0B1530;font-weight:600;font-size:15px;padding:16px 22px;border-radius:10px;text-decoration:none">Telegram</a>
+        <a href="https://wa.me/38163338105" style="background:#fff;border:1px solid #D8DCE8;color:#0B1530;font-weight:600;font-size:15px;padding:16px 22px;border-radius:10px;text-decoration:none">WhatsApp</a>
+        <a href="{{ phoneHref }}" style="background:#fff;border:1px solid #D8DCE8;color:#0B1530;font-weight:600;font-size:15px;padding:16px 22px;border-radius:10px;text-decoration:none">Позвонить</a>
+      </div>
+      <div style="display:flex;gap:22px;font-size:13px;color:#7A8093">
+        <span>✓ Лицензии Минюста № 740-06-00973, № 740-06-01248</span>
+        <span>✓ Срочно — за 24 часа</span>
+      </div>
+    </div>
+    <div style="position:relative">
+      <image-slot id="hero-1c" shape="rounded" radius="18" fit="cover" placeholder="Фото: документы / печать" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80" style="width:100%;height:420px;display:block"></image-slot>
+      <div style="position:absolute;right:-16px;top:-16px;width:120px;height:120px;border-radius:50%;background:#1F3BB3;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:rotate(8deg);box-shadow:0 14px 30px rgba(31,59,179,.35)">
+        <div style="font-size:10px;letter-spacing:.14em;opacity:.8">SUDSKI</div>
+        <div style="font-size:14px;font-weight:800;letter-spacing:.08em">TUMAČ</div>
+        <div style="width:36px;height:1px;background:rgba(255,255,255,.5);margin:5px 0"></div>
+        <div style="font-size:9px;opacity:.8">740-06-00973</div>
+      </div>
+      <div style="position:absolute;left:20px;bottom:-18px;background:#fff;border:1px solid #E8E9EE;border-radius:12px;padding:14px 18px;display:flex;gap:26px;box-shadow:0 12px 28px rgba(11,21,48,.12)">
+        <div><div style="font-size:22px;font-weight:800;color:#0B1530">15 лет</div><div style="font-size:11.5px;color:#7A8093">опыта</div></div>
+        <div><div style="font-size:22px;font-weight:800;color:#0B1530">35 880</div><div style="font-size:11.5px;color:#7A8093">страниц / год</div></div>
+        <div><div style="font-size:22px;font-weight:800;color:#0B1530">13</div><div style="font-size:11.5px;color:#7A8093">языков</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- services -->
+  <div style="padding:84px 56px 70px;background:#FDFDFB">
+    <div style="max-width:640px;margin-bottom:40px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#1F3BB3;margin-bottom:12px">Услуги</div>
+      <h2 style="font-size:36px;font-weight:800;letter-spacing:-.02em;color:#0B1530;margin:0">Всё, что нужно для легализации — в одном офисе</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px">
+      <sc-for list="{{ services }}" as="svc" hint-placeholder-count="10">
+        <div style="background:#fff;border:1px solid #E8E9EE;border-radius:14px;padding:22px 20px;min-height:140px;display:flex;flex-direction:column;gap:8px" style-hover="border-color:#1F3BB3;box-shadow:0 8px 20px rgba(31,59,179,.1)">
+          <div style="width:30px;height:30px;border-radius:8px;background:#E7ECFB;color:#1F3BB3;font-size:12.5px;font-weight:800;display:flex;align-items:center;justify-content:center">{{ svc.num }}</div>
+          <div style="font-size:14.5px;font-weight:700;color:#0B1530;line-height:1.35">{{ svc.title }}</div>
+          <div style="font-size:12px;color:#7A8093;line-height:1.5">{{ svc.desc }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- calc + prices -->
+  <div style="padding:14px 56px 84px;background:#FDFDFB">
+    <div style="background:#0B1530;border-radius:22px;padding:56px;display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start">
+      <div>
+        <div style="font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#8FA2E8;margin-bottom:12px">Цены и калькулятор</div>
+        <h2 style="font-size:34px;font-weight:800;letter-spacing:-.02em;color:#fff;margin:0 0 26px">Узнайте стоимость до заказа</h2>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;justify-content:space-between;background:rgba(255,255,255,.06);border-radius:10px;padding:14px 18px"><span style="font-size:14.5px;color:rgba(255,255,255,.8)">Личные документы RU↔SR, SR↔EN</span><span style="font-size:15px;font-weight:700;color:#fff">от 1 800 RSD/стр</span></div>
+          <div style="display:flex;justify-content:space-between;background:rgba(255,255,255,.06);border-radius:10px;padding:14px 18px"><span style="font-size:14.5px;color:rgba(255,255,255,.8)">Русский ↔ Английский (прямой)</span><span style="font-size:15px;font-weight:700;color:#fff">от 3 000 RSD/стр</span></div>
+          <div style="display:flex;justify-content:space-between;background:rgba(255,255,255,.06);border-radius:10px;padding:14px 18px"><span style="font-size:14.5px;color:rgba(255,255,255,.8)">Медицинские и спец-тексты</span><span style="font-size:15px;font-weight:700;color:#fff">от 2 500 RSD/стр</span></div>
+          <div style="display:flex;justify-content:space-between;background:rgba(255,255,255,.06);border-radius:10px;padding:14px 18px"><span style="font-size:14.5px;color:rgba(255,255,255,.8)">Апостиль (пошлина отдельно)</span><span style="font-size:15px;font-weight:700;color:#fff">100 EUR</span></div>
+        </div>
+        <div style="margin-top:20px;font-size:12.5px;line-height:1.7;color:rgba(255,255,255,.45)">Договоры считаем по знакам: 1 800 знаков с пробелами = 1 страница. Срочно (24 ч) — ×2. Оплата в RSD, EUR и RUB.</div>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:30px 32px;display:flex;flex-direction:column;gap:16px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <label style="display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:600;color:#7A8093">Языковая пара
+            <select value="{{ calcC.pair }}" onChange="{{ calcC.setPair }}" style="font-family:'Golos Text',sans-serif;font-size:15px;padding:12px;border:1px solid #D8DCE8;border-radius:10px;background:#fff;color:#0B1530">
+              <option value="ru-sr">Русский ↔ Сербский</option>
+              <option value="sr-en">Сербский ↔ Английский</option>
+              <option value="ru-en">Русский ↔ Английский</option>
+            </select>
+          </label>
+          <label style="display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:600;color:#7A8093">Тип документа
+            <select value="{{ calcC.type }}" onChange="{{ calcC.setType }}" style="font-family:'Golos Text',sans-serif;font-size:15px;padding:12px;border:1px solid #D8DCE8;border-radius:10px;background:#fff;color:#0B1530">
+              <option value="std">Свидетельства / дипломы / справки</option>
+              <option value="contract">Договор / большой текст (по знакам)</option>
+              <option value="med">Медицинские тексты</option>
+              <option value="spec">Спец-тексты</option>
+            </select>
+          </label>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:end">
+          <sc-if value="{{ calcC.isContract }}" hint-placeholder-val="{{ false }}">
+            <label style="display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:600;color:#7A8093">Знаков с пробелами
+              <input type="number" min="1" value="{{ calcC.chars }}" onChange="{{ calcC.setChars }}" style="font-family:'Golos Text',sans-serif;font-size:15px;padding:12px;border:1px solid #D8DCE8;border-radius:10px;color:#0B1530">
+            </label>
+          </sc-if>
+          <sc-if value="{{ calcC.notContract }}" hint-placeholder-val="{{ true }}">
+            <label style="display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:600;color:#7A8093">Количество страниц
+              <input type="number" min="1" value="{{ calcC.pages }}" onChange="{{ calcC.setPages }}" style="font-family:'Golos Text',sans-serif;font-size:15px;padding:12px;border:1px solid #D8DCE8;border-radius:10px;color:#0B1530">
+            </label>
+          </sc-if>
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:#0B1530;padding:12px 0;cursor:pointer">
+            <input type="checkbox" checked="{{ calcC.urgent }}" onChange="{{ calcC.toggleUrgent }}" style="width:18px;height:18px;accent-color:#1F3BB3">
+            Срочно, 24 часа (×2)
+          </label>
+        </div>
+        <div style="background:#F1F3F9;border-radius:12px;padding:16px 20px;display:flex;align-items:baseline;justify-content:space-between">
+          <div style="font-size:13px;color:#7A8093">{{ calcC.summary }}</div>
+          <div style="font-size:32px;font-weight:800;letter-spacing:-.02em;color:#1F3BB3">{{ calcC.total }}</div>
+        </div>
+        <a href="mailto:melodyofspeech@gmail.com" style="background:#1F3BB3;color:#fff;text-align:center;font-weight:700;font-size:15px;padding:15px;border-radius:10px;text-decoration:none">Отправить документ — точный расчёт за 10 минут</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- steps -->
+  <div style="padding:0 56px 84px;background:#FDFDFB">
+    <h2 style="font-size:34px;font-weight:800;letter-spacing:-.02em;color:#0B1530;margin:0 0 36px">Как это работает</h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
+      <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
+        <div style="background:#fff;border:1px solid #E8E9EE;border-radius:14px;padding:24px">
+          <div style="width:34px;height:34px;border-radius:50%;border:2px solid #1F3BB3;color:#1F3BB3;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:14px">{{ st.n }}</div>
+          <div style="font-size:16.5px;font-weight:700;color:#0B1530;margin-bottom:7px">{{ st.title }}</div>
+          <div style="font-size:13.5px;color:#7A8093;line-height:1.6">{{ st.desc }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- team -->
+  <div style="padding:0 56px 84px;background:#FDFDFB">
+    <div style="display:grid;grid-template-columns:.9fr 2fr;gap:48px;align-items:start">
+      <div>
+        <div style="font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#1F3BB3;margin-bottom:12px">Команда</div>
+        <h2 style="font-size:34px;font-weight:800;letter-spacing:-.02em;color:#0B1530;margin:0 0 14px">За результат отвечают люди, а не форма на сайте</h2>
+        <p style="font-size:14.5px;line-height:1.65;color:#565D72">Ваш документ ведёт конкретный специалист — от заявки до выдачи готового перевода.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+        <div style="background:#fff;border:1px solid #E8E9EE;border-radius:14px;overflow:hidden">
+          <image-slot id="team-1c-ivan" shape="rect" placeholder="Фото Ивана" style="width:100%;height:220px;display:block"></image-slot>
+          <div style="padding:18px 20px">
+            <div style="font-size:17px;font-weight:700;color:#0B1530">Иван</div>
+            <div style="font-size:12.5px;color:#7A8093;line-height:1.5;margin-top:4px">Судебный переводчик, соучредитель</div>
+            <div style="display:inline-block;background:#E7ECFB;color:#1F3BB3;font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:999px;margin-top:10px">Стаж 15 лет</div>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid #E8E9EE;border-radius:14px;overflow:hidden">
+          <image-slot id="team-1c-elena" shape="rect" placeholder="Фото Елены" style="width:100%;height:220px;display:block"></image-slot>
+          <div style="padding:18px 20px">
+            <div style="font-size:17px;font-weight:700;color:#0B1530">Елена</div>
+            <div style="font-size:12.5px;color:#7A8093;line-height:1.5;margin-top:4px">Директор, соучредитель</div>
+            <div style="display:inline-block;background:#E7ECFB;color:#1F3BB3;font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:999px;margin-top:10px">Стаж 12 лет</div>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid #E8E9EE;border-radius:14px;overflow:hidden">
+          <image-slot id="team-1c-ekaterina" shape="rect" placeholder="Фото Екатерины" style="width:100%;height:220px;display:block"></image-slot>
+          <div style="padding:18px 20px">
+            <div style="font-size:17px;font-weight:700;color:#0B1530">Екатерина Волкова</div>
+            <div style="font-size:12.5px;color:#7A8093;line-height:1.5;margin-top:4px">Юрист — ВНЖ/ПМЖ, нотариат</div>
+            <div style="display:inline-block;background:#E7ECFB;color:#1F3BB3;font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:999px;margin-top:10px">Стаж 8 лет</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div style="padding:0 56px 84px;background:#FDFDFB">
+    <h2 style="font-size:34px;font-weight:800;letter-spacing:-.02em;color:#0B1530;margin:0 0 30px">Частые вопросы</h2>
+    <div style="display:flex;flex-direction:column;gap:10px;max-width:900px">
+      <sc-for list="{{ faqC }}" as="f" hint-placeholder-count="5">
+        <div style="background:#fff;border:1px solid #E8E9EE;border-radius:12px;overflow:hidden">
+          <div onClick="{{ f.toggle }}" style="display:flex;align-items:center;gap:16px;padding:18px 22px;cursor:pointer">
+            <span style="flex:1;font-size:15.5px;font-weight:700;color:#0B1530">{{ f.q }}</span>
+            <span style="width:26px;height:26px;border-radius:50%;background:#E7ECFB;color:#1F3BB3;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center">{{ f.mark }}</span>
+          </div>
+          <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:0 22px 20px;font-size:14px;line-height:1.7;color:#565D72">{{ f.a }}</div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- contacts -->
+  <div style="padding:0 56px 84px;background:#FDFDFB">
+    <div style="border:1px solid #E8E9EE;border-radius:22px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr">
+      <div style="padding:48px">
+        <h2 style="font-size:30px;font-weight:800;letter-spacing:-.02em;color:#0B1530;margin:0 0 18px">Офис в центре Белграда</h2>
+        <div style="font-size:15.5px;line-height:1.65;color:#3D4356"><strong>Kralja Milutina 46</strong> — 100 метров от Посольства России</div>
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:9px 24px;margin:20px 0 26px;font-size:14.5px;color:#3D4356">
+          <span style="color:#7A8093">Пн–Сб</span><strong>09:00–20:00</strong>
+          <span style="color:#7A8093">Воскресенье</span><strong>по записи</strong>
+          <span style="color:#7A8093">Телефон</span><a href="{{ phoneHref }}" style="color:#0B1530;font-weight:700;text-decoration:none">{{ phone }}</a>
+          <span style="color:#7A8093">E-mail</span><a href="mailto:melodyofspeech@gmail.com" style="color:#1F3BB3;text-decoration:none">melodyofspeech@gmail.com</a>
+        </div>
+        <div style="display:flex;gap:10px">
+          <a href="https://t.me/Viktoria_rsb" style="background:#1F3BB3;color:#fff;font-weight:700;font-size:14px;padding:12px 22px;border-radius:10px;text-decoration:none">Telegram</a>
+          <a href="https://wa.me/38163338105" style="background:#1F3BB3;color:#fff;font-weight:700;font-size:14px;padding:12px 22px;border-radius:10px;text-decoration:none">WhatsApp</a>
+          <a href="{{ phoneHref }}" style="border:1px solid #D8DCE8;color:#0B1530;font-weight:600;font-size:14px;padding:12px 22px;border-radius:10px;text-decoration:none">Позвонить</a>
+        </div>
+      </div>
+      <iframe src="https://www.google.com/maps?q=Kralja+Milutina+46,+Beograd,+Serbia&hl=ru&z=16&output=embed" style="width:100%;height:100%;min-height:360px;border:none"></iframe>
+    </div>
+  </div>
+  <footer style="border-top:1px solid #E8E9EE;color:#7A8093;padding:24px 56px;display:flex;justify-content:space-between;font-size:12.5px;background:#FDFDFB">
+    <div>© 2026 MOS Translation · Melody of Speech</div>
+    <div>Лицензии Минюста Сербии № 740-06-00973 · № 740-06-01248</div>
+  </footer>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Попробуйте: «сделай страницу услуги в стиле <a class="dv-oid" href="#1a">1a</a>» · «в <a class="dv-oid" href="#1b">1b</a> сделай hero тёмным» · «смешай <a class="dv-oid" href="#1c">1c</a> с золотом из <a class="dv-oid" href="#1a">1a</a>»</p>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;phone&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;+381 62 1254246&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Контакты&quot;}}">
+class Component extends DCLogic {
+  state = {
+    faqA: -1, faqB: -1, faqC: -1,
+    A: { pair: 'ru-sr', type: 'std', pages: 1, chars: 1800, urgent: false },
+    B: { pair: 'ru-sr', type: 'std', pages: 1, chars: 1800, urgent: false },
+    C: { pair: 'ru-sr', type: 'std', pages: 1, chars: 1800, urgent: false }
+  };
+
+  static SERVICES = [
+    ['Судебный перевод документов', 'RU / SR / EN, с синей печатью'],
+    ['Нострификация диплома, аттестата', 'Для ENIC/NARIC, учёбы и работы'],
+    ['Апостиль на документы', 'Легализация для других стран'],
+    ['Сопровождение к нотариусу', 'Выход судебного переводчика'],
+    ['Оформление доверенностей', 'Для разных стран'],
+    ['Сопровождение ВНЖ / ПМЖ', 'Полный пакет документов'],
+    ['Открытие ИП / ДОО', 'Регистрация бизнеса в Сербии'],
+    ['Открытие банковского счёта', 'Помощь и перевод документов'],
+    ['Выезд переводчика в суд', 'Судебные заседания и допросы'],
+    ['Переводчик для заключения брака', 'Присутствие на церемонии']
+  ];
+
+  static STEPS = [
+    ['Заявка', 'Отправьте документ через форму, Telegram или WhatsApp — как удобнее.'],
+    ['Ответ за 10 минут', 'Менеджер посмотрит документ, назовёт точную стоимость и срок.'],
+    ['Перевод', 'Переводим, при необходимости выполняем вёрстку, печать и заверение.'],
+    ['Получение', 'В офисе или курьером. Оплата наличными, картой — RSD, EUR, RUB.']
+  ];
+
+  static FAQS = [
+    ['Сколько стоит перевод?', 'Личные документы RU↔SR и SR↔EN — от 1 800 RSD за страницу, русский ↔ английский — от 3 000 RSD, медицинские и специализированные тексты — от 2 500 RSD. Договоры считаем по знакам: 1 800 знаков с пробелами = 1 страница. Точную стоимость сообщим после просмотра документа — до начала работы.'],
+    ['Как быстро будет готов перевод?', 'Стандартный срок — 1–3 рабочих дня в зависимости от объёма. Срочный перевод выполняем в течение 24 часов с коэффициентом ×2.'],
+    ['Чем судебный перевод отличается от нотариального?', 'В Сербии официальные переводы для нотариуса, суда, полиции и госорганов делает судебный переводчик (sudski tumač) — лицензированный специалист из реестра Минюста. Именно его синяя печать и подпись придают документу юридическую силу; нотариус сам не переводит, а принимает документ с печатью судебного переводчика.'],
+    ['Можно ли всё сделать дистанционно?', 'Да. Пришлите сканы или фото документов — мы переведём, а заверенные экземпляры передадим курьером или вы заберёте их в офисе. Электронную версию (PDF) отправим на почту.'],
+    ['Где принимают перевод с вашей печатью?', 'Печать лицензированного судебного переводчика признают сербские нотариусы, суды, МУП и миграционная служба, банки и страховые, визовые центры и консульства — в Сербии и за её пределами.']
+  ];
+
+  static RATES = {
+    std:      { 'ru-sr': 1800, 'sr-en': 1800, 'ru-en': 3000 },
+    contract: { 'ru-sr': 1800, 'sr-en': 1800, 'ru-en': 3000 },
+    med:      { 'ru-sr': 2500, 'sr-en': 2500, 'ru-en': 3500 },
+    spec:     { 'ru-sr': 2500, 'sr-en': 2500, 'ru-en': 3500 }
+  };
+
+  setCalc(key, patch) {
+    this.setState(s => ({ [key]: Object.assign({}, s[key], patch) }));
+  }
+
+  buildCalc(key) {
+    const c = this.state[key];
+    const rate = Component.RATES[c.type][c.pair];
+    const isContract = c.type === 'contract';
+    const pages = isContract ? Math.max(1, Math.ceil((Number(c.chars) || 0) / 1800)) : Math.max(1, Number(c.pages) || 1);
+    const total = rate * pages * (c.urgent ? 2 : 1);
+    const fmt = n => n.toLocaleString('ru-RU').replace(/\u00a0/g, ' ');
+    return {
+      pair: c.pair, type: c.type, pages: c.pages, chars: c.chars, urgent: c.urgent,
+      isContract, notContract: !isContract,
+      total: fmt(total) + ' RSD',
+      summary: pages + ' стр. × ' + fmt(rate) + ' RSD' + (c.urgent ? ' × 2 (срочно)' : '') + (c.urgent ? ' · за 24 часа' : ' · 1–3 дня'),
+      setPair: e => this.setCalc(key, { pair: e.target.value }),
+      setType: e => this.setCalc(key, { type: e.target.value }),
+      setPages: e => this.setCalc(key, { pages: e.target.value }),
+      setChars: e => this.setCalc(key, { chars: e.target.value }),
+      toggleUrgent: () => this.setCalc(key, { urgent: !c.urgent })
+    };
+  }
+
+  buildFaq(stateKey) {
+    const open = this.state[stateKey];
+    return Component.FAQS.map(([q, a], i) => ({
+      q, a,
+      num: String(i + 1).padStart(2, '0'),
+      open: open === i,
+      mark: open === i ? '−' : '+',
+      toggle: () => this.setState({ [stateKey]: open === i ? -1 : i })
+    }));
+  }
+
+  renderVals() {
+    const phone = this.props.phone ?? '+381 62 1254246';
+    return {
+      phone,
+      phoneHref: 'tel:' + phone.replace(/[^+\d]/g, ''),
+      services: Component.SERVICES.map(([title, desc], i) => ({ title, desc, num: String(i + 1).padStart(2, '0') })),
+      steps: Component.STEPS.map(([title, desc], i) => ({ title, desc, num: String(i + 1).padStart(2, '0'), n: i + 1 })),
+      faqA: this.buildFaq('faqA'),
+      faqB: this.buildFaq('faqB'),
+      faqC: this.buildFaq('faqC'),
+      calcA: this.buildCalc('A'),
+      calcB: this.buildCalc('B'),
+      calcC: this.buildCalc('C')
+    };
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F7F4ED;font-family:'Golos Text',system-ui,sans-serif}
+@keyframes heroUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes sealSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes tabFill{from{width:0}to{width:100%}}
+@keyframes contentInA{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes contentInB{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes floatUp{0%{transform:translateY(130px);opacity:0}18%{opacity:.9}82%{opacity:.9}100%{transform:translateY(-170px);opacity:0}}
+@keyframes sealBob{0%,100%{transform:translate(-50%,-50%) translateY(-150px) rotate(-5deg)}50%{transform:translate(-50%,-50%) translateY(-136px) rotate(-2deg)}}
+@keyframes stampPress{0%{transform:translate(-50%,-50%) translateY(-150px) rotate(-5deg)}40%{transform:translate(-50%,-50%) translateY(0) scale(.96) rotate(0deg)}56%{transform:translate(-50%,-50%) translateY(0) scale(.96) rotate(0deg)}100%{transform:translate(-50%,-50%) translateY(-150px) rotate(-5deg)}}
+</style>
+</helmet>
+
+<div data-screen-label="MOS Translation — главная" style="background:#F7F4ED;min-width:1200px">
+
+  <!-- topbar -->
+  <div style="display:flex;justify-content:space-between;padding:10px 56px;font-size:12px;color:#8A8474;border-bottom:1px solid #E5DFD0">
+    <span>Kralja Milutina 46, Белград · 100 м от Посольства России</span>
+    <span>Пн–Сб 09:00–20:00 · Оплата RSD / EUR / RUB</span>
+  </div>
+
+  <!-- header -->
+  <header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 56px;background:rgba(247,244,237,.92);backdrop-filter:blur(10px);border-bottom:1px solid #E5DFD0">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:700;color:#211D15">MOS Translation</div>
+    <nav style="display:flex;gap:32px;font-size:14px;color:#5A5443">
+      <a href="#services" style="color:inherit;text-decoration:none;padding-bottom:3px;border-bottom:1px solid transparent;transition:border-color .3s" style-hover="border-bottom:1px solid #7A2E2E;color:#211D15">Услуги</a>
+      <a href="#prices" style="color:inherit;text-decoration:none;padding-bottom:3px;border-bottom:1px solid transparent;transition:border-color .3s" style-hover="border-bottom:1px solid #7A2E2E;color:#211D15">Цены</a>
+      <a href="#calc" style="color:inherit;text-decoration:none;padding-bottom:3px;border-bottom:1px solid transparent;transition:border-color .3s" style-hover="border-bottom:1px solid #7A2E2E;color:#211D15">Калькулятор</a>
+      <a href="#team" style="color:inherit;text-decoration:none;padding-bottom:3px;border-bottom:1px solid transparent;transition:border-color .3s" style-hover="border-bottom:1px solid #7A2E2E;color:#211D15">Команда</a>
+      <a href="#contacts" style="color:inherit;text-decoration:none;padding-bottom:3px;border-bottom:1px solid transparent;transition:border-color .3s" style-hover="border-bottom:1px solid #7A2E2E;color:#211D15">Контакты</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:22px">
+      <div style="display:flex;gap:14px;font-size:13px;font-weight:600">
+        <span style="color:#7A2E2E;border-bottom:2px solid #7A2E2E;padding-bottom:2px">RU</span>
+        <span style="color:#9A9382;cursor:pointer">SR</span>
+        <span style="color:#9A9382;cursor:pointer">EN</span>
+      </div>
+      <a href="mailto:melodyofspeech@gmail.com" style="background:#7A2E2E;color:#F7F4ED;font-size:14px;font-weight:600;padding:11px 22px;text-decoration:none;border-radius:2px;transition:background .3s,transform .3s" style-hover="background:#5E2222;transform:translateY(-1px)">Расчёт стоимости</a>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <div style="padding:92px 56px 60px;text-align:center;position:relative;overflow:hidden">
+    <div style="position:absolute;right:64px;top:64px;width:130px;height:130px;opacity:.5;animation:sealSpin 40s linear infinite;pointer-events:none">
+      <svg viewBox="0 0 130 130" style="width:100%;height:100%">
+        <circle cx="65" cy="65" r="62" fill="none" stroke="#7A2E2E" stroke-width="1.5"></circle>
+        <circle cx="65" cy="65" r="44" fill="none" stroke="#7A2E2E" stroke-width="1"></circle>
+        <path id="sealPath" d="M 65,14 a 51,51 0 1,1 -0.01,0" fill="none"></path>
+        <text style="font-size:10.5px;letter-spacing:.35em;fill:#7A2E2E;font-family:'Golos Text',sans-serif"><textPath href="#sealPath">SUDSKI TUMAČ · BEOGRAD · 740-06-00973 · </textPath></text>
+      </svg>
+    </div>
+    <div style="font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#7A2E2E;margin-bottom:24px;animation:heroUp .8s .05s cubic-bezier(.2,.7,.2,1) both">Бюро судебных переводов · Белград</div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:66px;line-height:1.06;font-weight:600;color:#211D15;margin:0 auto 24px;max-width:920px;text-wrap:balance;animation:heroUp .9s .15s cubic-bezier(.2,.7,.2,1) both">Перевод документов, имеющий силу закона</h1>
+    <p style="font-size:17px;line-height:1.65;color:#6B6452;max-width:640px;margin:0 auto 34px;animation:heroUp .9s .3s cubic-bezier(.2,.7,.2,1) both">Судебный переводчик с двумя лицензиями Минюста Сербии. Русский, сербский и английский — для ВНЖ, нотариуса, суда, банков и визовых центров.</p>
+    <div style="display:flex;justify-content:center;gap:14px;margin-bottom:20px;animation:heroUp .9s .45s cubic-bezier(.2,.7,.2,1) both">
+      <a href="mailto:melodyofspeech@gmail.com" style="background:#211D15;color:#F7F4ED;font-weight:600;font-size:15px;padding:15px 30px;text-decoration:none;border-radius:2px;transition:transform .3s,box-shadow .3s" style-hover="transform:translateY(-2px);box-shadow:0 10px 24px rgba(33,29,21,.25)">Отправить документ на расчёт</a>
+      <a href="https://t.me/Viktoria_rsb" style="border:1px solid #C9C0AA;color:#211D15;font-weight:600;font-size:15px;padding:15px 24px;text-decoration:none;border-radius:2px;transition:border-color .3s,background .3s" style-hover="border-color:#211D15;background:#fff">Telegram</a>
+      <a href="https://wa.me/38163338105" style="border:1px solid #C9C0AA;color:#211D15;font-weight:600;font-size:15px;padding:15px 24px;text-decoration:none;border-radius:2px;transition:border-color .3s,background .3s" style-hover="border-color:#211D15;background:#fff">WhatsApp</a>
+      <a href="{{ phoneHref }}" style="border:1px solid #C9C0AA;color:#211D15;font-weight:600;font-size:15px;padding:15px 24px;text-decoration:none;border-radius:2px;transition:border-color .3s,background .3s" style-hover="border-color:#211D15;background:#fff">{{ phone }}</a>
+    </div>
+    <div style="font-size:13px;color:#9A9382;animation:fadeIn 1.2s .7s both">Лицензии № 740-06-00973 и № 740-06-01248 · Реестр Министерства юстиции Республики Сербии</div>
+  </div>
+
+  <!-- hero image + stats -->
+  <div style="padding:0 56px 20px;animation:heroUp 1s .55s cubic-bezier(.2,.7,.2,1) both">
+    <image-slot id="hero-1b" shape="rect" fit="cover" placeholder="Панорамное фото: офис / документы" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80" credit="Photo by Nastuh Abootalebi on Unsplash" credit-href="https://unsplash.com/@sunday_digital" style="width:100%;height:400px;display:block"></image-slot>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #E5DFD0;border-top:none;background:#fff">
+      <div style="padding:26px;border-right:1px solid #E5DFD0"><div style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#211D15"><span data-count="15">0</span> <span style="font-size:17px;color:#7A2E2E">лет</span></div><div style="font-size:13px;color:#8A8474">опыта судебных переводов</div></div>
+      <div style="padding:26px;border-right:1px solid #E5DFD0"><div style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#211D15"><span data-count="35880">0</span></div><div style="font-size:13px;color:#8A8474">страниц за прошлый год</div></div>
+      <div style="padding:26px;border-right:1px solid #E5DFD0"><div style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#211D15"><span data-count="13">0</span></div><div style="font-size:13px;color:#8A8474">языков в работе</div></div>
+      <div style="padding:26px"><div style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#211D15"><span data-count="10">0</span> <span style="font-size:17px;color:#7A2E2E">мин</span></div><div style="font-size:13px;color:#8A8474">до ответа менеджера</div></div>
+    </div>
+  </div>
+
+  <!-- marquee -->
+  <div style="overflow:hidden;border-top:1px solid #E5DFD0;border-bottom:1px solid #E5DFD0;padding:16px 0;margin:40px 0 0;background:#F7F4ED">
+    <div style="display:flex;gap:0;width:max-content;animation:marquee 36s linear infinite;white-space:nowrap">
+      <div style="display:flex;gap:44px;padding-right:44px;font-family:'Cormorant Garamond',serif;font-size:19px;color:#6B6452">
+        <span>Судебный перевод</span><span style="color:#7A2E2E">✦</span><span>Нострификация</span><span style="color:#7A2E2E">✦</span><span>Апостиль</span><span style="color:#7A2E2E">✦</span><span>ВНЖ и ПМЖ</span><span style="color:#7A2E2E">✦</span><span>Доверенности</span><span style="color:#7A2E2E">✦</span><span>Сопровождение к нотариусу</span><span style="color:#7A2E2E">✦</span><span>Открытие ИП / ДОО</span><span style="color:#7A2E2E">✦</span><span>Выезд в суд</span><span style="color:#7A2E2E">✦</span>
+      </div>
+      <div style="display:flex;gap:44px;padding-right:44px;font-family:'Cormorant Garamond',serif;font-size:19px;color:#6B6452">
+        <span>Судебный перевод</span><span style="color:#7A2E2E">✦</span><span>Нострификация</span><span style="color:#7A2E2E">✦</span><span>Апостиль</span><span style="color:#7A2E2E">✦</span><span>ВНЖ и ПМЖ</span><span style="color:#7A2E2E">✦</span><span>Доверенности</span><span style="color:#7A2E2E">✦</span><span>Сопровождение к нотариусу</span><span style="color:#7A2E2E">✦</span><span>Открытие ИП / ДОО</span><span style="color:#7A2E2E">✦</span><span>Выезд в суд</span><span style="color:#7A2E2E">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- services -->
+  <div id="services" style="padding:84px 56px 78px;scroll-margin-top:90px">
+    <div data-reveal style="display:grid;grid-template-columns:.85fr 2fr;gap:56px;opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)">
+      <div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:600;color:#211D15;margin:0 0 16px;line-height:1.1">Услуги</h2>
+        <p style="font-size:14.5px;line-height:1.65;color:#6B6452">Работаем с личными, корпоративными, банковскими, судебными, медицинскими и арбитражными документами. Лично в Белграде или полностью дистанционно.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 40px">
+        <sc-for list="{{ services }}" as="svc" hint-placeholder-count="10">
+          <div style="display:flex;gap:18px;padding:18px 12px;margin:0 -12px;border-bottom:1px solid #E5DFD0;transition:background .3s;cursor:default" style-hover="background:#F1EDE2">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:16px;color:#7A2E2E;min-width:26px;padding-top:2px">{{ svc.num }}</span>
+            <div>
+              <div style="font-size:15.5px;font-weight:600;color:#211D15">{{ svc.title }}</div>
+              <div style="font-size:13px;color:#8A8474;line-height:1.5;margin-top:3px">{{ svc.desc }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- tabbed audiences -->
+  <div style="padding:0 56px 90px">
+    <div style="border:1px solid #E5DFD0;background:#fff">
+      <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="3">
+        <div style="display:{{ t.display }};grid-template-columns:1fr 1.1fr;gap:56px;padding:56px 56px 48px;animation:{{ t.contentAnim }}">
+          <div style="align-self:center">
+            <div style="font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#7A2E2E;margin-bottom:16px">Кому пригодится</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:#211D15;line-height:1.1;margin-bottom:18px">{{ t.title }}</div>
+            <p style="font-size:15.5px;line-height:1.7;color:#6B6452;margin:0 0 28px;max-width:480px">{{ t.desc }}</p>
+            <a href="#calc" style="display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:#211D15;text-decoration:none;border-bottom:1px solid #211D15;padding-bottom:3px;transition:color .3s,border-color .3s" style-hover="color:#7A2E2E;border-color:#7A2E2E">Рассчитать стоимость <span style="font-size:17px">→</span></a>
+          </div>
+          <div style="position:relative">
+            <image-slot id="{{ t.slotId }}" shape="rect" fit="cover" placeholder="{{ t.placeholder }}" style="width:100%;height:360px;display:block;transform:rotate(.6deg);box-shadow:0 24px 60px rgba(33,29,21,.14)"></image-slot>
+            <div style="position:absolute;left:50%;bottom:-18px;transform:translateX(-50%);background:#211D15;color:#F7F4ED;font-size:12.5px;letter-spacing:.06em;padding:10px 20px;border-radius:100px;white-space:nowrap">{{ t.pill }}</div>
+          </div>
+        </div>
+      </sc-for>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #E5DFD0">
+        <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="3">
+          <div onClick="{{ t.select }}" style="position:relative;overflow:hidden;text-align:center;padding:22px 10px;cursor:pointer;border-right:1px solid #E5DFD0;background:#F7F4ED">
+            <div style="position:absolute;inset:0 auto 0 0;background:linear-gradient(90deg,#5E2222,#7A2E2E 60%,#A34A3A);animation:{{ t.fillAnim }}"></div>
+            <div style="position:relative;font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:{{ t.labelColor }};transition:color .4s">{{ t.label }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- prices + calculator -->
+  <div id="prices" style="background:#211D15;padding:84px 56px;scroll-margin-top:90px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start">
+      <div data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)">
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:600;color:#F7F4ED;margin:0 0 30px">Прозрачные цены</h2>
+        <div style="display:flex;flex-direction:column">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(247,244,237,.15)"><span style="font-size:15px;color:rgba(247,244,237,.85)">Личные документы · RU↔SR, SR↔EN</span><span style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#F7F4ED">от 1 800 RSD/стр</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(247,244,237,.15)"><span style="font-size:15px;color:rgba(247,244,237,.85)">Русский ↔ Английский (прямой)</span><span style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#F7F4ED">от 3 000 RSD/стр</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(247,244,237,.15)"><span style="font-size:15px;color:rgba(247,244,237,.85)">Медицинские и спец-тексты</span><span style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#F7F4ED">от 2 500 RSD/стр</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(247,244,237,.15)"><span style="font-size:15px;color:rgba(247,244,237,.85)">Апостиль (пошлина отдельно)</span><span style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#F7F4ED">100 EUR</span></div>
+        </div>
+        <div style="margin-top:22px;font-size:13px;line-height:1.7;color:rgba(247,244,237,.5)">Договоры и большие тексты — по знакам: 1 800 знаков с пробелами = 1 страница.<br>Срочный перевод в течение 24 часов — коэффициент ×2.</div>
+      </div>
+      <div id="calc" data-reveal style="background:#F7F4ED;padding:34px 36px;display:flex;flex-direction:column;gap:18px;border-radius:2px;scroll-margin-top:110px;opacity:0;transform:translateY(28px);transition:opacity .9s .15s cubic-bezier(.2,.7,.2,1),transform .9s .15s cubic-bezier(.2,.7,.2,1)">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:26px;color:#211D15">Калькулятор стоимости</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <label style="display:flex;flex-direction:column;gap:7px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A8474">Языковая пара
+            <select value="{{ calc.pair }}" onChange="{{ calc.setPair }}" style="font-family:'Golos Text',sans-serif;font-size:15px;padding:12px;border:1px solid #C9C0AA;background:#fff;color:#211D15">
+              <option value="ru-sr">Русский ↔ Сербский</option>
+              <option value="sr-en">Сербский ↔ Английский</option>
+              <option value="ru-en">Русский ↔ Английский</option>
+            </select>
+          </label>
+          <label style="display:flex;flex-direction:column;gap:7px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A8474">Тип документа
+            <select value="{{ calc.type }}" onChange="{{ calc.setType }}" style="font-family:'Golos Text',sans-serif;font-size:15px;padding:12px;border:1px solid #C9C0AA;background:#fff;color:#211D15">
+              <option value="std">Свидетельства / дипломы / справки</option>
+              <option value="contract">Договор / большой текст (по знакам)</option>
+              <option value="med">Медицинские тексты</option>
+              <option value="spec">Спец-тексты</option>
+            </select>
+          </label>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:end">
+          <sc-if value="{{ calc.isContract }}" hint-placeholder-val="{{ false }}">
+            <label style="display:flex;flex-direction:column;gap:7px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A8474">Знаков с пробелами
+              <input type="number" min="1" value="{{ calc.chars }}" onChange="{{ calc.setChars }}" style="font-family:'Golos Text',sans-serif;font-size:15px;padding:12px;border:1px solid #C9C0AA;background:#fff;color:#211D15">
+            </label>
+          </sc-if>
+          <sc-if value="{{ calc.notContract }}" hint-placeholder-val="{{ true }}">
+            <label style="display:flex;flex-direction:column;gap:7px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A8474">Количество страниц
+              <input type="number" min="1" value="{{ calc.pages }}" onChange="{{ calc.setPages }}" style="font-family:'Golos Text',sans-serif;font-size:15px;padding:12px;border:1px solid #C9C0AA;background:#fff;color:#211D15">
+            </label>
+          </sc-if>
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:#211D15;padding:12px 0;cursor:pointer">
+            <input type="checkbox" checked="{{ calc.urgent }}" onChange="{{ calc.toggleUrgent }}" style="width:18px;height:18px;accent-color:#7A2E2E">
+            Срочно, 24 часа (×2)
+          </label>
+        </div>
+        <div style="border-top:1px solid #E5DFD0;padding-top:18px;display:flex;align-items:baseline;justify-content:space-between">
+          <div style="font-size:13px;color:#8A8474">{{ calc.summary }}</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#7A2E2E">{{ calc.total }}</div>
+        </div>
+        <a href="mailto:melodyofspeech@gmail.com" style="background:#7A2E2E;color:#F7F4ED;text-align:center;font-weight:600;font-size:15px;padding:15px;text-decoration:none;border-radius:2px;transition:background .3s" style-hover="background:#5E2222">Отправить документ на точный расчёт</a>
+        <div style="font-size:12px;color:#9A9382;text-align:center">Расчёт предварительный. Ответим в течение 10 минут.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- steps: sticky stacking cards -->
+  <div style="padding:84px 56px 100px">
+    <div style="display:grid;grid-template-columns:.85fr 2fr;gap:56px;align-items:start">
+      <div style="position:sticky;top:130px">
+        <div style="font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#7A2E2E;margin-bottom:14px">Как это работает</div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:600;color:#211D15;margin:0 0 16px;line-height:1.1">Как проходит заказ</h2>
+        <p style="font-size:14.5px;line-height:1.65;color:#6B6452;margin:0 0 26px">От заявки до готового перевода с синей печатью — обычно 1–3 дня. Листайте: каждый шаг — одна карточка.</p>
+        <a href="mailto:melodyofspeech@gmail.com" style="display:inline-block;background:#7A2E2E;color:#F7F4ED;font-weight:600;font-size:14px;padding:13px 24px;text-decoration:none;border-radius:2px;transition:background .3s" style-hover="background:#5E2222">Отправить документ</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:26px">
+        <div style="position:sticky;top:110px;background:#fff;border:1px solid #E5DFD0;border-radius:2px;padding:44px 48px;min-height:300px;box-sizing:border-box;box-shadow:0 -18px 44px rgba(33,29,21,.10)">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:92px;line-height:.9;color:#E5DFD0">01</div>
+            <div style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#7A2E2E;border:1px solid #E9D9D9;padding:6px 12px;border-radius:2px">Шаг 1</div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:30px;color:#211D15;margin:22px 0 10px">Заявка</div>
+          <div style="font-size:15px;color:#6B6452;line-height:1.65;max-width:520px">Отправьте документ через форму, Telegram или WhatsApp — как удобнее. Подойдут скан или фото с телефона.</div>
+        </div>
+        <div style="position:sticky;top:128px;background:#fff;border:1px solid #E5DFD0;border-radius:2px;padding:44px 48px;min-height:300px;box-sizing:border-box;box-shadow:0 -18px 44px rgba(33,29,21,.10)">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:92px;line-height:.9;color:#E5DFD0">02</div>
+            <div style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#7A2E2E;border:1px solid #E9D9D9;padding:6px 12px;border-radius:2px">Шаг 2</div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:30px;color:#211D15;margin:22px 0 10px">Ответ за 10 минут</div>
+          <div style="font-size:15px;color:#6B6452;line-height:1.65;max-width:520px">Менеджер посмотрит документ, назовёт точную стоимость и срок — до начала работы, без скрытых доплат.</div>
+        </div>
+        <div style="position:sticky;top:146px;background:#fff;border:1px solid #E5DFD0;border-radius:2px;padding:44px 48px;min-height:300px;box-sizing:border-box;box-shadow:0 -18px 44px rgba(33,29,21,.10)">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:92px;line-height:.9;color:#E5DFD0">03</div>
+            <div style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#7A2E2E;border:1px solid #E9D9D9;padding:6px 12px;border-radius:2px">Шаг 3</div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:30px;color:#211D15;margin:22px 0 10px">Перевод</div>
+          <div style="font-size:15px;color:#6B6452;line-height:1.65;max-width:520px">Переводим, при необходимости выполняем вёрстку, печать и заверение синей печатью судебного переводчика.</div>
+        </div>
+        <div style="position:sticky;top:164px;background:#211D15;border:1px solid #211D15;border-radius:2px;padding:44px 48px;min-height:300px;box-sizing:border-box;box-shadow:0 -18px 44px rgba(33,29,21,.22)">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:92px;line-height:.9;color:#7A2E2E">04</div>
+            <div style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#F7F4ED;border:1px solid rgba(247,244,237,.3);padding:6px 12px;border-radius:2px">Шаг 4</div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:30px;color:#F7F4ED;margin:22px 0 10px">Получение</div>
+          <div style="font-size:15px;color:rgba(247,244,237,.75);line-height:1.65;max-width:520px">В офисе или курьером. Оплата наличными или картой — RSD, EUR, RUB.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- seal: rolling wheel on a rail -->
+  <div id="seal-section" style="background:#211D15;margin-bottom:84px">
+    <div style="display:grid;grid-template-columns:1fr 1.1fr;gap:64px;padding:0 56px">
+      <div style="position:sticky;top:0;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden">
+        <div style="position:relative;width:410px;background:#F7F4ED;box-shadow:0 40px 90px rgba(0,0,0,.5);padding:38px 40px 34px">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#211D15">MOS Translation</div>
+          <div style="font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#8A8474;margin:4px 0 18px">Overeni prevod · Заверенный перевод</div>
+          <div style="height:1px;background:#E5DFD0;margin-bottom:18px"></div>
+          <div style="display:flex;flex-direction:column;gap:9px;margin-bottom:20px">
+            <div style="height:7px;background:#E5DFD0;width:96%"></div>
+            <div style="height:7px;background:#E5DFD0;width:88%"></div>
+            <div style="height:7px;background:#E5DFD0;width:93%"></div>
+            <div style="height:7px;background:#E5DFD0;width:60%"></div>
+          </div>
+          <div data-paper="0" style="border:1px solid #C9C0AA;padding:12px 16px;margin-bottom:16px;opacity:0;transform:translateY(12px);transition:opacity .8s,transform .8s">
+            <div style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#7A2E2E;margin-bottom:4px">Реестр Минюста Сербии</div>
+            <div style="font-size:13px;color:#211D15;font-weight:600">№ 740-06-00973 · № 740-06-01248</div>
+          </div>
+          <div style="position:relative;height:180px">
+            <div data-paper="1" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:150px;height:150px;opacity:0;transition:opacity .6s">
+              <svg viewBox="0 0 130 130" style="width:100%;height:100%;transform:rotate(-7deg);opacity:.8">
+                <circle cx="65" cy="65" r="62" fill="none" stroke="#35508C" stroke-width="1.4"></circle>
+                <circle cx="65" cy="65" r="44" fill="none" stroke="#35508C" stroke-width="1"></circle>
+                <path id="sealPathP" d="M 65,14 a 51,51 0 1,1 -0.01,0" fill="none"></path>
+                <text style="font-size:10.5px;letter-spacing:.35em;fill:#35508C;font-family:'Golos Text',sans-serif"><textPath href="#sealPathP">SUDSKI TUMAČ · BEOGRAD · 740-06-00973 · </textPath></text>
+                <text x="65" y="70" text-anchor="middle" style="font-size:13px;font-family:'Cormorant Garamond',serif;fill:#35508C;letter-spacing:.08em">MOS</text>
+              </svg>
+            </div>
+            <div id="stamp-seal" style="position:absolute;left:50%;top:50%;width:150px;height:150px;z-index:2;transform:translate(-50%,-50%) translateY(-150px) rotate(-5deg);animation:sealBob 5s ease-in-out infinite;filter:drop-shadow(0 18px 22px rgba(0,0,0,.35))">
+              <svg viewBox="0 0 130 130" style="width:100%;height:100%">
+                <circle cx="65" cy="65" r="62" fill="#211D15" stroke="#C05B41" stroke-width="1.4"></circle>
+                <circle cx="65" cy="65" r="44" fill="none" stroke="#C05B41" stroke-width="1"></circle>
+                <path id="sealPathS" d="M 65,14 a 51,51 0 1,1 -0.01,0" fill="none"></path>
+                <text style="font-size:10.5px;letter-spacing:.35em;fill:#C05B41;font-family:'Golos Text',sans-serif"><textPath href="#sealPathS">SUDSKI TUMAČ · BEOGRAD · 740-06-00973 · </textPath></text>
+                <text x="65" y="70" text-anchor="middle" style="font-size:13px;font-family:'Cormorant Garamond',serif;fill:#F7F4ED;letter-spacing:.08em">MOS</text>
+              </svg>
+            </div>
+          </div>
+          <div data-paper="2" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;opacity:0;transform:translateY(12px);transition:opacity .8s,transform .8s">
+            <span style="font-size:11px;letter-spacing:.08em;color:#3F3A2E;border:1px solid #C9C0AA;padding:5px 10px;border-radius:100px">Нотариус ✓</span>
+            <span style="font-size:11px;letter-spacing:.08em;color:#3F3A2E;border:1px solid #C9C0AA;padding:5px 10px;border-radius:100px">Суд ✓</span>
+            <span style="font-size:11px;letter-spacing:.08em;color:#3F3A2E;border:1px solid #C9C0AA;padding:5px 10px;border-radius:100px">МУП ✓</span>
+            <span style="font-size:11px;letter-spacing:.08em;color:#3F3A2E;border:1px solid #C9C0AA;padding:5px 10px;border-radius:100px">Банк ✓</span>
+            <span style="font-size:11px;letter-spacing:.08em;color:#3F3A2E;border:1px solid #C9C0AA;padding:5px 10px;border-radius:100px">Визовый центр ✓</span>
+          </div>
+        </div>
+      </div>
+      <div style="padding:16vh 0 18vh">
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:600;color:#F7F4ED;margin:0;line-height:1.15;max-width:520px">Почему нашей печати доверяют</h2>
+        <div data-step data-step-idx="0" style="min-height:52vh;display:flex;flex-direction:column;justify-content:center;opacity:.22;transition:opacity .7s">
+          <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:12px">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#C05B41">I</span>
+            <span style="font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:rgba(247,244,237,.5)">Основание</span>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:600;color:#F7F4ED;margin-bottom:14px">Лицензия Минюста Сербии</div>
+          <p style="font-size:16px;line-height:1.7;color:rgba(247,244,237,.65);margin:0;max-width:520px">Переводчик внесён в официальный реестр судебных переводчиков Республики Сербии. Две лицензии — № 740-06-00973 и № 740-06-01248 — дают право переводить русский, сербский и английский.</p>
+        </div>
+        <div data-step style="min-height:52vh;display:flex;flex-direction:column;justify-content:center;border-top:1px dashed rgba(247,244,237,.18);opacity:.22;transition:opacity .7s">
+          <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:12px">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#C05B41">II</span>
+            <span style="font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:rgba(247,244,237,.5)">Заверение</span>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:600;color:#F7F4ED;margin-bottom:14px">Синяя печать и подпись</div>
+          <p style="font-size:16px;line-height:1.7;color:rgba(247,244,237,.65);margin:0;max-width:520px">Каждый экземпляр заверяется печатью sudski tumač. Именно она — а не печать нотариуса — придаёт переводу юридическую силу в Сербии.</p>
+        </div>
+        <div data-step style="min-height:52vh;display:flex;flex-direction:column;justify-content:center;border-top:1px dashed rgba(247,244,237,.18);opacity:.22;transition:opacity .7s">
+          <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:12px">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#C05B41">III</span>
+            <span style="font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:rgba(247,244,237,.5)">Признание</span>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:600;color:#F7F4ED;margin-bottom:14px">Принимают везде</div>
+          <p style="font-size:16px;line-height:1.7;color:rgba(247,244,237,.65);margin:0;max-width:520px">Нотариусы, суды, МУП и миграционная служба, банки, страховые, визовые центры и консульства — в Сербии и за её пределами.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- team -->
+  <div id="team" style="padding:0 56px 84px;scroll-margin-top:90px">
+    <div data-reveal style="text-align:center;margin-bottom:44px;opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:600;color:#211D15;margin:0 0 10px">Наша команда</h2>
+      <div style="font-size:15px;color:#8A8474;font-style:italic">Самая главная ценность — это люди</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:36px;max-width:1080px;margin:0 auto">
+      <div data-reveal style="text-align:center;opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)">
+        <image-slot id="team-1b-ivan" shape="circle" placeholder="Фото Ивана" style="width:190px;height:190px;display:block;margin:0 auto 18px"></image-slot>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#211D15">Иван</div>
+        <div style="font-size:13.5px;color:#8A8474;line-height:1.55;margin-top:5px">Судебный переводчик,<br>соучредитель MOS Translation</div>
+        <div style="font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#7A2E2E;margin-top:10px">Стаж 15 лет</div>
+      </div>
+      <div data-reveal data-reveal-stagger="2" style="text-align:center;opacity:0;transform:translateY(28px);transition:opacity .9s .12s cubic-bezier(.2,.7,.2,1),transform .9s .12s cubic-bezier(.2,.7,.2,1)">
+        <image-slot id="team-1b-elena" shape="circle" placeholder="Фото Елены" style="width:190px;height:190px;display:block;margin:0 auto 18px"></image-slot>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#211D15">Елена</div>
+        <div style="font-size:13.5px;color:#8A8474;line-height:1.55;margin-top:5px">Директор, соучредитель<br>MOS Business Alliance</div>
+        <div style="font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#7A2E2E;margin-top:10px">Стаж 12 лет</div>
+      </div>
+      <div data-reveal data-reveal-stagger="3" style="text-align:center;opacity:0;transform:translateY(28px);transition:opacity .9s .24s cubic-bezier(.2,.7,.2,1),transform .9s .24s cubic-bezier(.2,.7,.2,1)">
+        <image-slot id="team-1b-ekaterina" shape="circle" placeholder="Фото Екатерины" style="width:190px;height:190px;display:block;margin:0 auto 18px"></image-slot>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#211D15">Екатерина Волкова</div>
+        <div style="font-size:13.5px;color:#8A8474;line-height:1.55;margin-top:5px">Юрист — ВНЖ/ПМЖ,<br>доверенности, нотариат</div>
+        <div style="font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#7A2E2E;margin-top:10px">Стаж 8 лет</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div style="padding:0 56px 84px">
+    <div data-reveal style="display:grid;grid-template-columns:.85fr 2fr;gap:56px;opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:600;color:#211D15;margin:0;line-height:1.1">Частые вопросы</h2>
+      <div style="border-top:1px solid #E5DFD0">
+        <sc-for list="{{ faq }}" as="f" hint-placeholder-count="5">
+          <div style="border-bottom:1px solid #E5DFD0">
+            <div onClick="{{ f.toggle }}" style="display:flex;align-items:baseline;gap:18px;padding:20px 0;cursor:pointer">
+              <span style="flex:1;font-size:16.5px;font-weight:600;color:#211D15;transition:color .3s" style-hover="color:#7A2E2E">{{ f.q }}</span>
+              <span style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#7A2E2E;transition:transform .35s;transform:{{ f.markTransform }}">+</span>
+            </div>
+            <div style="display:grid;grid-template-rows:{{ f.rows }};transition:grid-template-rows .45s cubic-bezier(.2,.7,.2,1)">
+              <div style="overflow:hidden">
+                <div style="padding:0 40px 22px 0;font-size:14.5px;line-height:1.7;color:#6B6452">{{ f.a }}</div>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- contacts -->
+  <div id="contacts" style="background:#fff;border-top:1px solid #E5DFD0;padding:76px 56px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:stretch;scroll-margin-top:90px">
+    <iframe src="https://www.google.com/maps?q=Kralja+Milutina+46,+Beograd,+Serbia&hl=ru&z=16&output=embed" style="width:100%;min-height:340px;border:1px solid #E5DFD0;filter:grayscale(1) sepia(.15)"></iframe>
+    <div data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:600;color:#211D15;margin:0 0 22px">Приходите или пишите</h2>
+      <div style="font-size:16px;line-height:1.7;color:#3F3A2E"><strong>Kralja Milutina 46, Белград</strong> — 100 метров от Посольства России</div>
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:9px 26px;margin:22px 0;font-size:15px;color:#3F3A2E">
+        <span style="color:#9A9382">Пн–Сб</span><strong>09:00–20:00</strong>
+        <span style="color:#9A9382">Воскресенье</span><strong>по записи</strong>
+        <span style="color:#9A9382">Телефон</span><a href="{{ phoneHref }}" style="color:#211D15;font-weight:700;text-decoration:none">{{ phone }}</a>
+        <span style="color:#9A9382">E-mail</span><a href="mailto:melodyofspeech@gmail.com" style="color:#211D15;text-decoration:none">melodyofspeech@gmail.com</a>
+      </div>
+      <div style="display:flex;gap:12px">
+        <a href="https://t.me/Viktoria_rsb" style="background:#211D15;color:#F7F4ED;font-weight:600;font-size:14px;padding:12px 22px;text-decoration:none;border-radius:2px;transition:background .3s" style-hover="background:#7A2E2E">Telegram</a>
+        <a href="https://wa.me/38163338105" style="background:#211D15;color:#F7F4ED;font-weight:600;font-size:14px;padding:12px 22px;text-decoration:none;border-radius:2px;transition:background .3s" style-hover="background:#7A2E2E">WhatsApp</a>
+        <a href="mailto:melodyofspeech@gmail.com" style="border:1px solid #C9C0AA;color:#211D15;font-weight:600;font-size:14px;padding:12px 22px;text-decoration:none;border-radius:2px;transition:border-color .3s" style-hover="border-color:#211D15">Отправить документ</a>
+      </div>
+      <div style="margin-top:20px;font-size:12.5px;color:#9A9382">Часы могут меняться в праздничные дни — уточняйте по телефону.</div>
+    </div>
+  </div>
+
+  <footer style="background:#211D15;color:rgba(247,244,237,.55);padding:24px 56px;display:flex;justify-content:space-between;font-size:12.5px">
+    <div>© 2026 MOS Translation · Melody of Speech</div>
+    <div>Лицензии Минюста Сербии № 740-06-00973 · № 740-06-01248</div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;phone&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;+381 62 1254246&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Контакты&quot;}}">
+class Component extends DCLogic {
+  state = {
+    faqOpen: -1,
+    activeTab: 0,
+    tabTick: 0,
+    calc: { pair: 'ru-sr', type: 'std', pages: 1, chars: 1800, urgent: false }
+  };
+
+  static TABS = [
+    {
+      label: 'Частным лицам',
+      title: 'Документы для жизни в Сербии',
+      desc: 'ВНЖ и ПМЖ, свидетельства о рождении и браке, дипломы и аттестаты, справки, водительские права. Переводим и заверяем так, как требуют МУП, нотариусы и госорганы.',
+      pill: 'Личные документы · от 1 800 RSD/стр',
+      slotId: 'tab-private',
+      placeholder: 'Фото: клиент с документами'
+    },
+    {
+      label: 'Бизнесу',
+      title: 'Регистрация и работа компании',
+      desc: 'Открытие ИП и ДОО, уставные документы, договоры, банковские и финансовые бумаги. Считаем большие тексты по знакам — прозрачно и без сюрпризов.',
+      pill: 'Договоры · 1 800 знаков = 1 страница',
+      slotId: 'tab-business',
+      placeholder: 'Фото: подписание договора'
+    },
+    {
+      label: 'Суд и нотариус',
+      title: 'Устный перевод с выездом',
+      desc: 'Сопровождение к нотариусу, выезд судебного переводчика в суд и на допросы, присутствие на заключении брака. Печать и подпись имеют силу закона.',
+      pill: 'Выезд переводчика · по записи',
+      slotId: 'tab-court',
+      placeholder: 'Фото: у нотариуса'
+    }
+  ];
+
+  static SERVICES = [
+    ['Судебный перевод документов', 'RU / SR / EN, с синей печатью'],
+    ['Нострификация диплома, аттестата', 'Для ENIC/NARIC, учёбы и работы'],
+    ['Апостиль на документы', 'Легализация для других стран'],
+    ['Сопровождение к нотариусу', 'Выход судебного переводчика'],
+    ['Оформление доверенностей', 'Для разных стран'],
+    ['Сопровождение ВНЖ / ПМЖ', 'Полный пакет документов'],
+    ['Открытие ИП / ДОО', 'Регистрация бизнеса в Сербии'],
+    ['Открытие банковского счёта', 'Помощь и перевод документов'],
+    ['Выезд переводчика в суд', 'Судебные заседания и допросы'],
+    ['Переводчик для заключения брака', 'Присутствие на церемонии']
+  ];
+
+  static STEPS = [
+    ['Заявка', 'Отправьте документ через форму, Telegram или WhatsApp — как удобнее.'],
+    ['Ответ за 10 минут', 'Менеджер посмотрит документ, назовёт точную стоимость и срок.'],
+    ['Перевод', 'Переводим, при необходимости выполняем вёрстку, печать и заверение.'],
+    ['Получение', 'В офисе или курьером. Оплата наличными, картой — RSD, EUR, RUB.']
+  ];
+
+  static FAQS = [
+    ['Сколько стоит перевод?', 'Личные документы RU↔SR и SR↔EN — от 1 800 RSD за страницу, русский ↔ английский — от 3 000 RSD, медицинские и специализированные тексты — от 2 500 RSD. Договоры считаем по знакам: 1 800 знаков с пробелами = 1 страница. Точную стоимость сообщим после просмотра документа — до начала работы.'],
+    ['Как быстро будет готов перевод?', 'Стандартный срок — 1–3 рабочих дня в зависимости от объёма. Срочный перевод выполняем в течение 24 часов с коэффициентом ×2.'],
+    ['Чем судебный перевод отличается от нотариального?', 'В Сербии официальные переводы для нотариуса, суда, полиции и госорганов делает судебный переводчик (sudski tumač) — лицензированный специалист из реестра Минюста. Именно его синяя печать и подпись придают документу юридическую силу; нотариус сам не переводит, а принимает документ с печатью судебного переводчика.'],
+    ['Можно ли всё сделать дистанционно?', 'Да. Пришлите сканы или фото документов — мы переведём, а заверенные экземпляры передадим курьером или вы заберёте их в офисе. Электронную версию (PDF) отправим на почту.'],
+    ['Где принимают перевод с вашей печатью?', 'Печать лицензированного судебного переводчика признают сербские нотариусы, суды, МУП и миграционная служба, банки и страховые, визовые центры и консульства — в Сербии и за её пределами.']
+  ];
+
+  static RATES = {
+    std:      { 'ru-sr': 1800, 'sr-en': 1800, 'ru-en': 3000 },
+    contract: { 'ru-sr': 1800, 'sr-en': 1800, 'ru-en': 3000 },
+    med:      { 'ru-sr': 2500, 'sr-en': 2500, 'ru-en': 3500 },
+    spec:     { 'ru-sr': 2500, 'sr-en': 2500, 'ru-en': 3500 }
+  };
+
+  componentDidMount() {
+    this._revealed = new Set();
+    this._counted = new Set();
+    this.initScrollFx();
+    // auto-advance tabs
+    this._tabTimer = setInterval(() => this.nextTab(), 6000);
+
+    this._sealIdx = -1;
+    this._stamped = false;
+  }
+
+  activateSeal(idx) {
+    if (idx === this._sealIdx) return;
+    this._sealIdx = idx;
+    document.querySelectorAll('[data-paper]').forEach(p => {
+      const i = Number(p.getAttribute('data-paper'));
+      const on = i <= idx;
+      p.style.opacity = on ? (i === 1 ? '' : '1') : '0';
+      if (i === 1) p.style.opacity = on ? '1' : '0';
+      else p.style.transform = on ? 'translateY(0)' : 'translateY(12px)';
+    });
+    const stamp = document.getElementById('stamp-seal');
+    if (!stamp) return;
+    if (idx >= 1 && !this._stamped) {
+      this._stamped = true;
+      stamp.style.animation = 'stampPress 1.5s cubic-bezier(.45,0,.2,1) both';
+      clearTimeout(this._stampT);
+      this._stampT = setTimeout(() => { stamp.style.animation = 'sealBob 5s ease-in-out infinite'; }, 1550);
+    } else if (idx < 1 && this._stamped) {
+      this._stamped = false;
+      clearTimeout(this._stampT);
+      stamp.style.animation = 'sealBob 5s ease-in-out infinite';
+    }
+  }
+
+  componentDidUpdate() {
+    // re-renders recreate DOM nodes; re-wire observers and restore revealed state
+    this.initScrollFx();
+  }
+
+  initScrollFx() {
+    if (this._io) this._io.disconnect();
+    if (this._cio) this._cio.disconnect();
+    if (this._sio) this._sio.disconnect();
+
+    // scroll reveal (persistent across re-renders via index keys)
+    this._io = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          this._revealed.add(en.target.getAttribute('data-ridx'));
+          en.target.style.opacity = '1';
+          en.target.style.transform = 'none';
+          this._io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('[data-reveal]').forEach((el, i) => {
+      el.setAttribute('data-ridx', String(i));
+      if (this._revealed.has(String(i))) {
+        el.style.transition = 'none';
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      } else {
+        this._io.observe(el);
+      }
+    });
+
+    // count-up numbers
+    const fmtNum = n => n.toLocaleString('ru-RU').replace(/\u00a0/g, ' ');
+    this._cio = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (!en.isIntersecting) return;
+        const el = en.target;
+        this._cio.unobserve(el);
+        this._counted.add(el.getAttribute('data-cidx'));
+        const target = Number(el.getAttribute('data-count'));
+        const t0 = performance.now();
+        const dur = 1400;
+        const tick = now => {
+          const p = Math.min(1, (now - t0) / dur);
+          const eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = fmtNum(Math.round(target * eased));
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: 0.6 });
+    document.querySelectorAll('[data-count]').forEach((el, i) => {
+      el.setAttribute('data-cidx', String(i));
+      if (this._counted.has(String(i))) {
+        el.textContent = fmtNum(Number(el.getAttribute('data-count')));
+      } else {
+        this._cio.observe(el);
+      }
+    });
+
+    // pinned seal section: highlight steps in view + drive the document/stamp state
+    const steps = Array.from(document.querySelectorAll('#seal-section [data-step]'));
+    this._sio = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        en.target.style.opacity = en.isIntersecting ? '1' : '.22';
+        if (en.isIntersecting) this.activateSeal(steps.indexOf(en.target));
+      });
+    }, { threshold: 0.55 });
+    steps.forEach(el => this._sio.observe(el));
+    // restore visual state after re-render
+    const cur = this._sealIdx; this._sealIdx = -2; this._stamped = false;
+    if (cur >= 0) this.activateSeal(cur);
+  }
+
+  nextTab() {
+    this.setState(s => ({ activeTab: (s.activeTab + 1) % Component.TABS.length, tabTick: s.tabTick + 1 }));
+  }
+
+  selectTab(i) {
+    clearInterval(this._tabTimer);
+    this._tabTimer = setInterval(() => this.nextTab(), 6000);
+    this.setState(s => ({ activeTab: i, tabTick: s.tabTick + 1 }));
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._cio) this._cio.disconnect();
+    if (this._sio) this._sio.disconnect();
+    clearInterval(this._tabTimer);
+    clearTimeout(this._stampT);
+  }
+
+  setCalc(patch) {
+    this.setState(s => ({ calc: Object.assign({}, s.calc, patch) }));
+  }
+
+  renderVals() {
+    const phone = this.props.phone ?? '+381 62 1254246';
+    const c = this.state.calc;
+    const rate = Component.RATES[c.type][c.pair];
+    const isContract = c.type === 'contract';
+    const pages = isContract ? Math.max(1, Math.ceil((Number(c.chars) || 0) / 1800)) : Math.max(1, Number(c.pages) || 1);
+    const total = rate * pages * (c.urgent ? 2 : 1);
+    const fmt = n => n.toLocaleString('ru-RU').replace(/\u00a0/g, ' ');
+    const open = this.state.faqOpen;
+    const at = this.state.activeTab;
+    const anim = this.state.tabTick % 2 === 0 ? 'contentInA .7s cubic-bezier(.2,.7,.2,1) both' : 'contentInB .7s cubic-bezier(.2,.7,.2,1) both';
+    return {
+      phone,
+      phoneHref: 'tel:' + phone.replace(/[^+\d]/g, ''),
+      tabs: Component.TABS.map((t, i) => ({
+        label: t.label, title: t.title, desc: t.desc, pill: t.pill, slotId: t.slotId, placeholder: t.placeholder,
+        display: at === i ? 'grid' : 'none',
+        contentAnim: at === i ? anim : 'none',
+        fillAnim: at === i ? 'tabFill 6s linear forwards' : 'none',
+        labelColor: at === i ? '#F7F4ED' : '#8A8474',
+        select: () => this.selectTab(i)
+      })),
+      services: Component.SERVICES.map(([title, desc], i) => ({ title, desc, num: String(i + 1).padStart(2, '0') })),
+      steps: Component.STEPS.map(([title, desc], i) => ({ title, desc, num: String(i + 1).padStart(2, '0'), n: i + 1 })),
+      faq: Component.FAQS.map(([q, a], i) => ({
+        q, a,
+        rows: open === i ? '1fr' : '0fr',
+        markTransform: open === i ? 'rotate(45deg)' : 'rotate(0deg)',
+        toggle: () => this.setState({ faqOpen: open === i ? -1 : i })
+      })),
+      calc: {
+        pair: c.pair, type: c.type, pages: c.pages, chars: c.chars, urgent: c.urgent,
+        isContract, notContract: !isContract,
+        total: fmt(total) + ' RSD',
+        summary: pages + ' стр. × ' + fmt(rate) + ' RSD' + (c.urgent ? ' × 2 (срочно) · за 24 часа' : ' · 1–3 дня'),
+        setPair: e => this.setCalc({ pair: e.target.value }),
+        setType: e => this.setCalc({ type: e.target.value }),
+        setPages: e => this.setCalc({ pages: e.target.value }),
+        setChars: e => this.setCalc({ chars: e.target.value }),
+        toggleUrgent: () => this.setCalc({ urgent: !c.urgent })
+      }
+    };
+  }
+}
+
+</script>
+</body>
+</html>
